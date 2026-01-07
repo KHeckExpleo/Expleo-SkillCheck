@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expleo SkillCheck</title>
+	<link rel="stylesheet" href="Expleo_ESC_style.css">
+</head>
+<body>
+
+<header class="exam-header">
+  <div class="header-left">
+    <!-- Optional: Logo-Box wie auf der Startseite -->
+    <img class="header-logo" src="./pictures/expleo.png" alt="Expleo">
+    <div class="header-titles">
+      <h1><span id="headerId"></span> - <span class="value" id="sub-header"></span></h1>
+    </div>
+  </div>
+</header>
+        
+<!-- ZEILE 1: Info-Bar (Karten nebeneinander, automatisch umbrechend) -->
+<div class="info-bar">
+   <div class="info-item mode-badge" id="info-mode">
+   <span id=appMode class="label">Mode:</span>
+   <span class="value">–</span>
+   </div>
+   <div class="info-item">
+     <span id="appLicense" class="label">Ihre Lizenz:</span>
+     <span class="value" id="licencePeriod">30</span>
+     <span class="value" id="appLicenseUnit">xxx</span>
+   </div>
+       <div class="info-item" style="display:inline-flex; gap:6px; align-items:center; margin-right:12px;">
+      <span class="label">Number of questions:</span>
+      <span class="value" id="info-question-count">xx</span>
+    </div>
+   <div class="info-item" id="info-percentage">
+     <span class="label" id="passing-score-label">You need at least </span>
+     <span class="value" id="passing-percentage">xx</span>
+   </div>
+   <div class="info-item" id="info-score">
+     <span class="label" id="currentScoreLabel">Aktueller Score:</span>
+     <span class="value" id="currentScore">0% (0/100)</span>
+   </div>
+   <div class="info-item" id="info-time">
+     <span class="label" id="timeRemaining"></span>
+     <span class ="value" id="timer">120:00</span><span class="label" id="time-unit">minutes</span>
+   </div>
+</div>
+<div class="layout-row layout-row--2">
+  <!-- Links: Inhalt / LO -->
+  <section class="left-col">
+    <div class="lo-filter">
+      <label for="lo-select" id="learningObjective">Lernziele:</label>
+      <select id="lo-select" class="lo-select">
+        <option value="ALL" selected>All LO (40)</option>
+      </select>
+      <span id="lo-count" class="lo-count">Zeige alle 40 Fragen</span>
+    </div>
+  </section>
+<!-- ZEILE 2: Zweispaltiges Raster (LO links, Unanswered rechts) -->
+  <section class="middle-col">
+	  <div class="unanswered-dd">
+	    <!-- gleicher Stil wie LO-Label -->
+	    <label for="unanswered-select" id="not-answered-questions">Nicht beantwortete Fragen:</label>
+	    <!-- gleicher Stil wie LO-Select -->
+	    <select id="unanswered-select" class="lo-select">
+	      <option id="yourChoice" value="" selected disabled>Frage auswählen</option>
+	       <!-- Optionen werden später per JS gefüllt -->
+	    </select>
+	    <!-- optional: Zähler der unbeantworteten Fragen -->
+	    <span id="unanswered-count" class="lo-count"></span>
+	  </div>
+  </section>
+</div>  
+<!-- Buttons bleiben unten -->
+ <div class="controls">
+   <button type="button" id="prev-btn">Previous Question</button>
+   <button type="button" id="next-btn">Next Question</button>
+   <button type="button" id="reset-btn">Reset Answers</button>
+   <button type="button" id="submit-exam-btn">Submit Exam</button>
+   <div class="question-item">
+      <span class="label" id="question-word">Question</span>
+      <input type="number" id="current-question-input" class="question-input" min="1" value="1">
+      <span id="of-word">of</span> <span id="question-count-progress">333</span>
+   </div>
+ </div>
+
+<div class="progress-bar">
+    <div class="progress" id="progress-bar"></div>
+</div>
+
+
+<!-- 3) NEUE ZEILE: HAUPTINHALT UNTERHALB DER ZWEISPALTIGEN ZEILE -->
+<div class="main-content">
+  <form id="exam-form">
+    <!-- Container für dynamische Fragen -->
+    <div id="questions-container"></div>
+    <!-- Questions will be loaded here by questions.js -->
+  </form>
+
+  <div class="results" id="results">
+    <div class="score" id="score"></div>
+    <div id="answer-feedback"></div>
+    <div class="results-buttons">
+      <button type="button" id="repeat-exam-btn">Repeat Exam</button>
+      <button type="button" id="repeat-failed-btn">Repeat Failed Questions</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="module">
+  /******************************************************************
+   * Imports aus deinen Modulen (einmalig, ohne weitere <script src>)
+   ******************************************************************/
+  import { loadConfig, loadExamData } from './Expleo_ESC_loader_configuration.js';
+  import { buildExplanations }        from './Expleo_ESC_explanations.js';
+  import { loadData, initApp }        from './Expleo_ESC_scripts.js';
+  import { buildLOSelectBox }         from './Expleo_ESC_select_question.js';
+  import { renderQuestions }          from './Expleo_ESC_questions.js';
+
+  /******************************************************************
+   * Utils & Logging
+   ******************************************************************/
+  const log  = (...a) => console.log('[UnansweredDD]', ...a);
+  const warn = (...a) => console.warn('[UnansweredDD]', ...a);
+  const err  = (...a) => console.error('[UnansweredDD]', ...a);
+
+  // Warten, bis predicate() true liefert (Polling)
+  function waitFor(predicate, { interval = 50, timeout = 8000 } = {}) {
+    return new Promise((resolve, reject) => {
+      const start = performance.now();
+      const t = setInterval(() => {
+        try {
+          if (predicate()) {
+            clearInterval(t);
+            resolve(true);
+          } else if (performance.now() - start > timeout) {
+            clearInterval(t);
+            reject(new Error('waitFor: Timeout'));
+          }
+        } catch (e) {
+            clearInterval(t);
+            reject(e);
+        }
+      }, interval);
+    });
+  }
+
+  // uiTexts robust beziehen: 1) direkten Loader importieren, 2) sonst window.uiTexts, 3) Fallback
+  async function getUiTexts() {
+    // 1) Versuche den Loader direkt zu importieren (falls er loadUITexts exportiert)
+    try {
+      const mod = await import('./Expleo_ESC_loader_UItext.js');
+      console.log('[getUiTexts] exports:', Object.keys(mod));
+      if (mod?.loadUITexte) {
+        console.log('if true');
+        const texts = await mod.loadUITexte();
+        if (texts) return texts;
+      }
+    } catch (e) {
+      // kein harter Fehler – wir versuchen window.uiTexts
+    }
+  }
+
+  // Robuster Text-Setter (wirkt auch auf <option>)
+  function setTextById(id, text) {
+    const el = document.getElementById(id);
+    if (!el) { warn('setTextById: Element fehlt:', id); return; }
+    const t = (text ?? '').toString().trim();
+    if (el.tagName === 'OPTION') {
+      el.textContent = t; // sichtbarer Text
+      el.label = t;       // einige UIs lesen label
+    } else {
+      el.textContent = t;
+    }
+  }
+
+  /******************************************************************
+   * State-Auswertung
+   ******************************************************************/
+  function getUnansweredIndices() {
+    if (Array.isArray(window.appState?.unanswered)) {
+      return window.appState.unanswered.slice();
+    }
+    const questions = window.appState?.questions || window.questions || [];
+    if (!Array.isArray(questions)) return [];
+    const res = [];
+    questions.forEach((q, i) => {
+      const answered =
+        q?.selectedAnswer != null ||
+        q?.userAnswer != null ||
+        (Array.isArray(q?.userAnswers) && q.userAnswers.length > 0);
+      if (!answered) res.push(i);
+    });
+    return res;
+  }
+
+  /******************************************************************
+   * Dropdown: Render + Wiring
+   ******************************************************************/
+  function renderUnansweredDropdown(uiTexts) {
+    const select  = document.getElementById('unanswered-select');
+    const countEl = document.getElementById('unanswered-count');
+    if (!select) { warn('render: #unanswered-select fehlt'); return; }
+
+    const unanswered = getUnansweredIndices();
+    log('render -> unansweredCount:', unanswered.length);
+
+    // Sicher leeren (keine innerHTML-Strings)
+    select.textContent = '';
+
+    // Platzhalter dynamisch (aus uiTexts)
+    const placeholderText = (uiTexts?.yourChoice ?? '– Frage auswählen –').toString().trim();
+    const placeholder = document.createElement('option');
+    placeholder.id = 'yourChoice';
+    placeholder.value = '';
+    placeholder.textContent = placeholderText;
+    placeholder.label = placeholderText;
+    placeholder.selected = true;
+    placeholder.disabled = true;   // auf false setzen, wenn auswählbar gewünscht
+    select.appendChild(placeholder);
+
+    // Items hinzufügen
+    unanswered.forEach(idx => {
+      const opt = document.createElement('option');
+      opt.value = String(idx);                 // 0-basierter Index
+      opt.textContent = `Frage ${idx + 1}`;
+      select.appendChild(opt);
+    });
+
+    if (countEl) countEl.textContent = `(${unanswered.length})`;
+
+    // Falls etwas extern den Text überschreibt, sofort korrigieren
+    queueMicrotask(() => {
+      const opt = document.getElementById('yourChoice');
+      if (opt && (opt.textContent || '').trim() !== placeholderText) {
+        log('re-apply placeholder text (was overwritten externally)');
+        setTextById('yourChoice', placeholderText);
+      }
+    });
+  }
+
+  function wireUnansweredDropdown() {
+    const select = document.getElementById('unanswered-select');
+    if (!select) { warn('wire: #unanswered-select fehlt'); return; }
+
+    // Doppel-Registrierung verhindern
+    if (select.dataset.wired === '1') return;
+    select.dataset.wired = '1';
+
+    const navigate = window.goToQuestion || window.showQuestion || window.navigateToQuestion;
+    if (!navigate) {
+      warn('Keine Navigationsfunktion gefunden (goToQuestion / showQuestion / navigateToQuestion).');
+    }
+
+    select.addEventListener('change', (e) => {
+      const val = e.target.value;
+      const idx = Number.parseInt(val, 10);
+      if (Number.isInteger(idx) && idx >= 0) {
+        if (navigate) navigate(idx);       // 0-basiert
+        e.target.selectedIndex = 0;        // zurück auf Platzhalter
+      }
+    });
+  }
+
+  // Externe Aktualisierung (z. B. nach Beantwortung)
+  function makeUpdateUnansweredDropdown(uiTexts) {
+    return () => renderUnansweredDropdown(uiTexts);
+  }
+
+  /******************************************************************
+   * Elemente die in exam bzw. training Modus angezeigt werden Mode-Badge + Time/Score
+   ******************************************************************/
+  function initModeBadge() {
+    const params = new URLSearchParams(window.location.search);
+    const rawMode = params.get('mode');
+    const mode = (rawMode || 'exam').toLowerCase().trim();
+
+    const modeValueSpan = document.querySelector('#info-mode .value');
+    if (modeValueSpan) {
+      modeValueSpan.textContent = (mode === 'training') ? 'Training' : 'Examination';
+    }
+    const timeBlock  = document.getElementById('info-time');
+    const scoreBlock = document.getElementById('info-score');
+    const percentBlock = document.getElementById('info-percentage');
+    const examBtn = document.getElementById('submit-exam-btn');
+    if (mode === 'training') {
+      timeBlock?.classList.add('hidden');
+      scoreBlock?.classList.add('hidden');
+      percentBlock?.classList.add('hidden');
+      examBtn?.classList.add('hidden');
+    } else {
+      timeBlock?.classList.remove('hidden');
+      scoreBlock?.classList.remove('hidden');
+      percentBlock?.classList.remove('hidden');
+      examBtn?.classList.remove('hidden');
+    }
+    document.body.dataset.mode = mode;
+  }
+
+  /******************************************************************
+   * Lizenz-Tage (Hinweis: deine HTML-IDs weichen ab)
+   * In deinem Markup heißt es #licencePeriod + #appLicenseUnit, nicht #info-license-days.
+   * Passe bei Bedarf an – diese Funktion nutzt aktuell #info-license-days.
+   ******************************************************************/
+  const CONFIG_URL = './configuration/Expleo_ESC_configuration.json';
+  async function updateLicenseDays() {
+    const el = document.getElementById('info-license-days'); // <— ggf. anpassen!
+    if (!el) return; // In deinem HTML existiert diese ID nicht – nur Hinweis.
+    try {
+      const res = await fetch(CONFIG_URL, { cache: 'no-store' });
+      const cfg = await res.json();
+      const raw = (cfg.licencePeriod ?? '').toString().trim();
+      const days = Number.parseInt(raw, 10);
+      el.textContent = Number.isFinite(days) && days >= 0 ? `${days} Tage` : '0 Tage';
+    } catch { /* still */ }
+  }
+
+  /******************************************************************
+   * Initialisierung (einmalig, in richtiger Reihenfolge)
+   ******************************************************************/
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      log('Init start');
+
+      // 1) Konfiguration + Daten + Grundaufbau
+      await loadConfig();
+
+      // 2) UI-Texte sicher laden/besorgen
+      const uiTexts = await getUiTexts();
+      log('uiTexts:', uiTexts);
+
+      // 3) Daten/Fragen laden und UI aufbauen
+      const examData = await loadExamData();
+      await buildExplanations();
+      await loadData();             // erwartet: window.appState wird aufgebaut
+      await buildLOSelectBox();
+
+      renderQuestions(examData);
+
+      // 4) Mode + Lizenz
+      initModeBadge();
+      await updateLicenseDays();    // Hinweis zur ID siehe oben
+
+      // 5) Warten, bis DOM & State wirklich bereit sind
+      await waitFor(() => !!document.getElementById('unanswered-select'));
+      await waitFor(() => document.querySelectorAll('.question[id^="question-"]').length > 0);
+
+      initApp();
+
+      // 6) Dropdown rendern + einmalig verdrahten
+      renderUnansweredDropdown(uiTexts);
+      wireUnansweredDropdown();
+
+      // 7) Externe Aktualisierung bereitstellen
+      window.updateUnansweredDropdown = makeUpdateUnansweredDropdown(uiTexts);
+
+      // 8) Sanity-Check
+      const select = document.getElementById('unanswered-select');
+      if (!select) {
+        warn('#unanswered-select fehlt nach Init');
+      } else if (select.options.length === 1) {
+        warn('Nur Platzhalter vorhanden – evtl. sind alle Fragen beantwortet oder appState leer?');
+      } else {
+        log('Optionen im Dropdown:', select.options.length);
+      }
+
+      log('Init done');
+    } catch (e) {
+      err('Init error:', e);
+    }
+  });
+</script>
+
+
+</body>
+</html>

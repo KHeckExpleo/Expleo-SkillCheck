@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expleo SkillCheck</title>
+  <link rel="stylesheet" href="Expleo_ESC_style.css">
+</head>
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <img class="header-logo" src="./pictures/expleo.png" alt="Expleo">
+        <div class="header-titles">
+		<h1 id="header">Placeholder</h1></div>
+      </div>
+      <div class="header-right"><!-- optional --></div>
+    </header>
+
+	<!-- Zeile 1: Welcome (links) + Info-Panel (rechts) -->
+	<div class="layout-row">
+	  <section class="left-col">
+	    <h2>
+	      Welcome to Expleo SkillCheck.<br />
+	      Select your preferred <strong>language</strong> and the <strong>mode</strong> in which you would like to use SkillCheck.
+	      <p>
+	      We wish you every success with your training and exam preparation.
+	    </h2>
+	  </section>
+
+<div style="text-align:center; width:100%;">
+  <div class="info-bar"
+       style="
+		  display:flex;
+		  justify-content:center;   /* zentriert die gesamte Gruppe */
+		  align-items:center;
+		  gap: 16px;                /* Abstand zwischen den drei Bereichen */
+		  width:100%;
+		  box-sizing:border-box;
+      ">
+    <div class="info-item" style="display:inline-flex; gap:6px; align-items:center; margin-right:12px;">
+      <span class="label">Topic:</span>
+      <span class="value" id="info-topic">ISTQB CT-AI</span>
+    </div>
+    <div class="info-item" style="display:inline-flex; gap:6px; align-items:center;">
+      <span class="label">You have a licence for</span>
+      <span class="value" id="info-license-days">XX</span>
+    </div>
+  </div>
+</div>
+	</div>
+	
+	<!-- Zeile 2: Auswahl mittig darunter -->
+
+	<div class="layout-row layout-row--center">
+	  <section class="center-col center-col--full" aria-label="Auswahlbereich">
+	    <div class="selection-area selection-area--centered">
+	      <label for="select-language" class="field-label">Language selection:</label>
+	      <select id="select-language" class="select-control">
+	        <option value="" disabled selected>– Please select –</option>
+	        <option value="de">German</option>
+	        <option value="en">English</option>
+	        <option value="fr">French</option>
+	      </select>
+	
+	      <label for="select-mode" class="field-label">Modus selection:</label>
+	      <select id="select-mode" class="select-control">
+	        <option value="" disabled selected>– Please select –</option>
+	        <option value="training">Training</option>
+	        <option value="exam">Examination</option>
+	      </select>
+	
+	      <!-- NEU: Button innerhalb der selection-area -->
+	      <div class="actions actions--in-grid">
+	        <button id="btn-start">Start</button>
+	      </div>
+	    </div>
+	  </section>
+	</div>
+
+
+
+    <footer style="width:100%; text-align:center; color:#777; margin-top:20px;">
+      Copy right (c) Expleo IT Germany
+    </footer>
+
+  <!-- optional: Start-Logik -->
+	<script>
+	(function(){
+	  const language = document.getElementById('select-language');
+	  const mode     = document.getElementById('select-mode');
+	  document.getElementById('btn-start').addEventListener('click', () => {
+	    const lang = language.value, m = mode.value;
+	    if (!lang || !m) {
+	      alert('Bitte Sprache und Modus auswählen.');
+	      return;
+	    }
+	    // Werte für Prüfungsseite verfügbar machen
+	    localStorage.setItem('skillcheck_lang', lang);
+	    localStorage.setItem('skillcheck_mode', m);
+	
+	    // Prüfungsseite öffnen (neues Tab/Fenster)
+	    const url = encodeURI('Expleo_SkillCheck.html') + `?lang=${lang}&mode=${m}`;
+	    const win = window.open(url, '_blank');
+	    if (!win) alert('Popup-Blocker aktiv. Bitte Popups erlauben.');
+	  });
+	})();
+	</script>
+
+<script type="module">
+  const CONFIG_URL = './configuration/Expleo_ESC_configuration_UItext_de.json';
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  async function init() {
+    const titleEl = document.getElementById('header');     // oder 'app-title' – passend zur HTML
+    const topicEl = document.getElementById('info-topic'); // muss in der HTML existieren
+
+    try {
+      const res = await fetch(CONFIG_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+
+      const cfg = await res.json();
+      // Erwartete Struktur: { "header": "...", "subHeader": "..." }
+
+      const header   = (cfg.header   ?? '').toString().trim();
+      const subHeader= (cfg.subHeader?? '').toString().trim();
+
+      if (titleEl)  titleEl.textContent  = header   || 'Expleo SkillCheck';
+      if (topicEl)  topicEl.textContent  = subHeader|| 'ISTQB CT-AI';
+
+    } catch (err) {
+      console.error('Konfig laden fehlgeschlagen:', err);
+      if (titleEl && !titleEl.textContent?.trim())  titleEl.textContent = 'Expleo SkillCheck';
+      if (topicEl && !topicEl.textContent?.trim())  topicEl.textContent = 'ISTQB CT-AI';
+    }
+  }
+
+
+// Anzahl der Prüfungsfragen dynamisch ermitteln
+  document.addEventListener('DOMContentLoaded', () => {
+    updateQuestionCount('de'); // {lang} = 'de'
+  });
+
+  async function updateQuestionCount(lang = 'de') {
+    const el = document.getElementById('info-question-count');
+    if (!el) return;
+
+    // Pfad ggf. anpassen: relativ zur HTML meist "./exams/..."
+    const url = `./exams/CT-AI-Pruefungsfragen_Probepruefung_${lang}.json`;
+
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+
+      const data = await res.json();
+
+      // Erwartete Struktur: Array von Blöcken, je Block: Details = Array von Fragen
+      // Zähle alle Objekte in allen Details, die eine QuestionId besitzen (Case-insensitiv)
+      const count = Array.isArray(data)
+        ? data.reduce((sum, block) => {
+            const details = Array.isArray(block?.Details) ? block.Details : [];
+            return sum + details.filter(hasQuestionId).length;
+          }, 0)
+        : 0;
+
+      el.textContent = String(count);
+    } catch (err) {
+      console.error('Fragen-Datei konnte nicht gezählt werden:', err);
+      if (!el.textContent || el.textContent.trim() === 'xx') el.textContent = '0';
+    }
+  }
+
+  function hasQuestionId(obj) {
+    if (!obj || typeof obj !== 'object') return false;
+    // robust gegen unterschiedliche Schreibweisen: QuestionId / QuestionID / questionId
+    return Object.keys(obj).some(k => k.toLowerCase() === 'questionid');
+  }
+
+// Lizenz-dauer auslesen
+
+  const LICENCE_URL = './configuration/Expleo_ESC_configuration.json';
+
+  document.addEventListener('DOMContentLoaded', updateLicenseDays);
+
+  async function updateLicenseDays() {
+    const el = document.getElementById('info-license-days');
+    if (!el) return; // Falls das Element fehlt, bricht sauber ab
+
+    try {
+      const res = await fetch(LICENCE_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+
+      const cfg = await res.json();
+
+      // licencePeriod als String oder Zahl zulassen; Whitespace entfernen und sicher parsen
+      const raw = (cfg.licencePeriod ?? '').toString().trim();
+      const days = Number.parseInt(raw, 10);
+
+      el.textContent = Number.isFinite(days) && days >= 0 ? `${days} days` : '0 days';
+    } catch (err) {
+      console.error('Lizenz-Tage konnten nicht gelesen werden:', err);
+      // Fallback, falls Request fehlschlägt
+      if (!el.textContent || el.textContent.includes('XX')) {
+        el.textContent = '0 Tage';
+           }
+    }
+  }
+
+</script>
+</body>

@@ -1,0 +1,733 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+	background-color: #f5f7fa;
+	color: #333;
+	line-height: 1.6;
+}
+.exam-container {
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+header {
+	text-align: center;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #2c3e50;
+	padding-bottom: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.header-left {
+	/* flex: 0 0 75%; */
+	display: flex;
+	text-align: left;
+	gap: 16px; /*Abstand zwischen Bild und Text*/
+}
+.header-right {
+	flex: 0 0 25%;
+	text-align: right;
+}
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* optional: Abstand zwischen h1 und h2 */	
+}
+.header-logo {
+    width: 160px;
+    height: auto;	
+}
+h1 {
+	color: #5A3EBF;
+	margin-bottom: 10px;
+}
+h2 {
+	color: #7B5CF0;
+	margin-bottom: 10px;
+}
+
+.exam-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	background-color: #D6C8FF; /* Lavendel */
+	padding: 15px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+/* Top info container styles */
+.top-info-container {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.timer-score-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 15px;
+	width: 100%;
+}
+.timer {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #2c3e50;
+	flex: 1;
+	text-align: left;
+}
+.dynamic-score {
+	background-color: #D6C8FF;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: right;
+	flex: 1;
+	max-width: 300px;
+}
+.progress-info {
+	text-align: center;
+	margin: 10px 0;
+	width: 100%;
+}
+.progress-bar {
+	display: non /* zeigt die Progressbar nicht an*/
+	height: 10px;
+	background-color: #e0e0e0;
+	border-radius: 5px;
+	margin: 10px 0 20px 0;
+	overflow: hidden;
+	width: 100%;
+}
+.progress {
+	height: 100%;
+	background-color: #2c3e50;
+	width: 0%;
+	transition: width 0.3s;
+}
+.question {
+	margin-bottom: 30px;
+	padding: 20px;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	background-color: #fff;
+	width: 100%;
+}
+
+.question-number {
+	font-weight: bold;
+	color: #2c3e50;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+}
+/*
+.question-number {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    width: 200px; *//* or whatever width you prefer */
+    /* display: inline-block; */ /* if you want to set width on inline element */
+/*}
+*/
+.question-text {
+	margin-bottom: 15px;
+}
+.options {
+	margin-left: 20px;
+}
+.option {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: flex-start;
+}
+.option input {
+	margin-right: 10px;
+	margin-top: 3px;
+}
+.controls {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 100px;
+    width: 100%;
+    gap: 12px;            /* NEU: Abstand zwischen Buttons (z. B. 12–16px) */
+
+}
+button {
+	padding: 12px 25px;
+	background-color: #5A3EBF;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+button:hover {
+	background-color: #1a252f;
+}
+button:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+}
+.results {
+	display: none;
+	margin-top: 30px;
+	padding: 20px;
+	background-color: #D6C8FF;
+	border-radius: 8px;
+	width: 100%;
+}
+.score {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.answer-feedback {
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 5px;
+}
+.correct {
+	background-color: #d4edda;
+	border-left: 4px solid #28a745;
+}
+.incorrect {
+	background-color: #f8d7da;
+	border-left: 4px solid #dc3545;
+}
+.explanation {
+	margin-top: 10px;
+	font-style: italic;
+	color: #555;
+}
+.multi-select-note {
+	font-style: italic;
+	color: #666;
+	margin-bottom: 10px;
+}
+.question-navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0px;
+	width: 100%;
+}
+.current-question-feedback {
+	margin-top: 20px;
+	padding: 15px;
+	border-radius: 5px;
+	display: none;
+}
+.multi-select-hint {
+	font-weight: normal;
+	font-style: italic;
+	color: #666;
+	margin-left: 5px;
+}
+.results-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
+}
+.results-buttons button {
+	background-color: #5A3EBF;
+}
+.results-buttons button:hover {
+	background-color: #2980b9;
+}
+
+/* New styles for the modifications */
+.left-controls {
+	width: 200px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.main-content {
+	flex: 1;
+}
+.question-input {
+	width: 100px;
+	text-align: center;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 22px; /* Add this line */
+}
+.unanswered-list {
+	background-color: #7B5CF0;
+	border: 1px solid #7B5CF0;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	max-height: 200px;
+	overflow-y: auto;
+	width: 100%;
+}
+.unanswered-list h3 {
+	margin: 0 0 10px 0;
+	color: white;
+	font-size: 1em;
+}
+.unanswered-item {
+	cursor: pointer;
+	color: white;
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+.unanswered-item:hover {
+	background-color: #f1b0b7;
+}
+
+
+.answer-option-badge {
+  font-weight: 600;
+  color: #0b5394;
+  margin-left: 6px;
+}
+
+.lo-filter,
+.unanswered-dd {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* oder nowrap, je nach gewünschtem Verhalten */
+  margin: 0 0 12px;
+  background-color: #7B5CF0; /*#D6C8FF Beispiel: Lavendel */
+  color: white;              /* Textfarbe */
+  padding: 6px 10px;        /* Innenabstand */
+  border-radius: 6px;       /* abgerundete Ecken */
+  font-weight: 600;         /* etwas fetter */
+  
+}
+
+.unanswered-dd .field-label {
+  margin: 0;            /* überschreibt evtl. globale Margins */
+  white-space: nowrap;      /* <— hält den Text in einer Zeile */
+}  
+.unanswered-dd .lo-select {
+  width: auto;          /* falls irgendwo 100% gesetzt war */
+  min-width: 220px;     /* angenehme Mindestbreite; nach Wunsch anpassen */
+  max-width: 360px;     /* wie beim LO-Select */
+} 
+
+/* Zeile mit LO-Filter links und Not-answered rechts */
+.lo-row {
+  display: flex;
+  align-items: flex-start;     /* Oberkanten ausrichten */
+  justify-content: space-between;
+  gap: 16px;                   /* Abstand zwischen links/rechts */
+  margin: 12px 0 20px;
+}
+
+
+/* Unanswered-Container rechts in der linken Spalte ausrichten */
+#unanswered-container {
+  /* Sichtbar machen (falls vorher per inline-style hidden) */
+  display: block;
+
+  /* schmale, rechte Karte in der linken Spalte */
+  min-width: 260px;
+  max-width: 420px;            /* passe nach Geschmack an */
+
+  /* Nach rechts schieben */
+  margin-left: auto;
+
+  /* Breite so begrenzen, dass er nicht unter die rechte Sidebar läuft:
+     460px (Sidebar) + 16px (Zwischenabstand) = 476px */
+  max-width: calc(100% - 476px);
+
+  /* optional: etwas Raum und Gestaltung */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+/* Optional: Inhalt des Containers auf volle Breite des Blocks bringen */
+#unanswered-container .unanswered-list {
+  width: 100%;
+}
+
+
+/* Dynamic score styles */
+.dynamic-score .current {
+	font-weight: bold;
+	font-size: 1.1em;
+	white-space: nowrap; /* Previne împărțirea textului pe mai multe rânduri */
+}
+.dynamic-score .required {
+	color: #2c3e50;
+	font-style: italic;
+}
+
+/* Stiluri pentru butoanele de submit din interiorul întrebărilor */
+.question-navigation {
+	margin-bottom: 10px;
+}
+
+.submit-answer-btn {
+	padding: 10px 20px;
+	background-color: darkgreen;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+.submit-answer-btn:hover {
+	background-color: #1a252f;
+}
+
+.submit-answer-btn:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+}
+
+@media (max-width: 900px) { /*alt: 768*/
+  .layout-row.layout-row--2 {
+    grid-template-columns: 1fr 1fr;  /* einspaltig */
+    gap: 16px;
+  }
+  .middle-col, .right-col {
+    width: 100%;
+  }
+
+	.exam-container {
+		padding: 15px;
+		flex-direction: column;
+	}
+	.header-left, .header-right {
+		text-align: center;
+		width: 100%;
+		flex: 0 0 100%;
+	}
+	.left-controls {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.left-controls button {
+		flex: 1;
+		min-width: 150px;
+	}
+	.exam-info {
+		flex-direction: column;
+	}
+	.controls {
+		flex-direction: column;
+		gap: 10px;
+	}
+	button {
+		width: 100%;
+	}
+	.question-navigation {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.results-buttons {
+		flex-direction: column;
+	}
+	.timer-score-row {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.timer {
+		text-align: center;
+	}
+	.dynamic-score {
+		text-align: center;
+		max-width: 100%;
+	}
+
+.question[data-multi="true"] .question-number::after {
+  content: " (multiple answers)";
+  font-weight: 600;
+  color: #7B5CF0;
+  margin-left: 6px;
+  }
+}
+ /* Container für den mittleren Auswahlbereich */
+ .selection-area {
+   display: grid;
+   grid-template-columns: 200px 260px; /* Label-Spalte + Select-Spalte */
+   grid-auto-rows: min-content;
+   gap: 16px 24px;
+   align-content: start;
+   width: 100%;
+ }
+
+ .field-label {
+   align-self: center;
+   justify-self: end;
+   background: #eee;            /* dezente Label-Kachel wie im Screenshot */
+   border: 1px solid #bbb;
+   padding: 8px 12px;
+   border-radius: 6px;
+   font-weight: 600;
+   min-height: 40px;
+   display: flex;
+   align-items: center;
+ }
+
+ /* Dropdowns ohne „Auswahl“-Titel & ohne Rahmen-Karte */
+ .select-control {
+   width: 100%;
+   min-height: 40px;
+   padding: 8px 10px;
+   border: 1px solid #c7c7d6;
+   border-radius: 6px;
+   background: #fff;
+   font-size: 1rem;
+ }
+
+ /* Bereich für Start-Button mittig unter den Dropdowns */
+ .actions {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   margin-top: 20px;
+ }
+
+ /* Header-Logo optisch dem Screenshot annähern */
+ .header-logo {
+   width: 160px;
+   height: auto;
+   border: 2px solid #000;
+   background: #000;
+   padding: 8px;
+   border-radius: 4px;
+ }
+
+ /* Rechts das Info-Panel: nutze vorhandene Farben, ergänze Rahmen */
+ .info-panel {
+   border: 2px solid #333;
+   border-radius: 6px;
+   padding: 12px;
+   background: #f6f6f9;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+ 
+.info-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: start;
+  margin-bottom: 12px;  /* z.B. 12–20px nach Geschmack */
+}
+ 
+ .info-item {
+   display: inline-flex;
+   align-items: center;
+   padding: 6px 8px;
+   border-radius: 6px;
+   gap: 6px;
+   background: #FFC107; /* #7B5CF0 */
+   border: 1px solid #7B5CF0;
+   flex: 0 0 auto; /* NICHT wachsen, NICHT auf volle Breite strecken */
+ }
+ 
+ .info-item .label {
+   color: #5A3EBF;
+   font-weight: 700;
+   white-space: nowrap;
+ }
+ .info-item .value {
+   background: #fff;
+   border: 1px solid #ddd;
+   padding: 2px 6px;
+   border-radius: 4px;
+   font-weight: 700;
+   white-space: nowrap;          /* <- neu */
+ }
+ .question-item {
+   display: inline-flex;
+   align-items: center;
+   padding: 6px 8px;
+   border-radius: 6px;
+   gap: 6px;
+   background: #5A3EBF; /* #7B5CF0 */
+   border: 1px solid #7B5CF0;
+   color: white;
+   font-weight: 700;
+   flex: 0 0 auto; /* NICHT wachsen, NICHT auf volle Breite strecken */
+   margin-left: 50px;
+ }
+
+/* Werte kompakt, keine unnötigen Abstände */
+.info-item .value,
+.info-item .timer,
+.info-item .time-unit {
+  color: black;
+  white-space: nowrap;
+  margin: 0;                /* sicherstellen, dass kein Default-Margin reinfunkt */
+}
+ 
+
+ /* Linke Intro-Spalte + mittlere Auswahl-Spalte, rechte Info-Spalte */
+ .left-col   {
+  grid-column: 1;
+  min-width: 0;
+   }
+   
+ .middle-col {
+  grid-column: 2;
+ }
+ 
+.left-col .controls {
+  margin-top: auto;        /* auto NEU: schiebt die Buttons an das untere Ende */
+}
+
+/* Etwas mehr Zeilenabstand für gute Lesbarkeit im Welcome-Text */
+.left-col p {
+  line-height: 1.8;
+  font-size: 1.05rem;  /* optional: minimal größer */
+}
+
+/* Dreispaltige Zeile */
+.layout-row.layout-row--2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* links flexibel, Mitte fix, rechts fix */
+  gap: 16px;                               /* Abstand zwischen Spalten */
+  align-items: start;                       /* Oberkanten ausrichten */
+}
+
+/* Optional: mehr Platz zwischen Zeile 1 (Welcome/Info) und Zeile 2 (Auswahl) */
+.layout-row + .layout-row {
+  margin-top: 20px;    /* z. B. 20–28px */
+  align-itmes: strech;
+}
+
+/* WICHTIG: Grid-Items dürfen schrumpfen */
+.left-col,
+.middle-col {
+  min-width: 0;                 /* verhindert, dass Inhalte das Grid sprengen */
+}
+
+
+/* H2 in der linken Spalte zentrieren */
+.left-col h2 {
+  text-align: center;   /* Text zentrieren */
+  margin: 0 auto;       /* Block zentriert, falls eine max-width gesetzt wird */
+  max-width: 60ch;      /* optional: bessere Zeilenlänge (ca. 60 Zeichen) */
+  line-height: 1.5;     /* angenehme Zeilenhöhe */
+}
+
+ /* Titelzeile in der Mitte */
+ .titlebar {
+   background: #7B5CF0;
+   color: #fff;
+   height: 64px;
+   border-radius: 6px;
+   font-weight: 700;
+   font-size: 1.4rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+   margin-bottom: 16px;
+ }
+
+ /* Responsiv: rechts unter die Mitte, dann einspaltig */
+ @media (max-width: 900px) {
+   .layout-row {
+     flex-direction: column;
+   }
+   .left-col, .center-col, .right-col {
+     flex: 1 1 auto;
+     width: 100%;
+   }
+ }
+
+/* Zeile 2 zentrieren (wie bereits vorgeschlagen) */
+.layout-row.layout-row--center {
+  justify-content: center;
+}
+
+/* Center-Spalte in Zeile 2: volle Breite, Inhalt mittig */
+.center-col.center-col--full {
+  flex: 0 1 100%;
+  display: flex;              /* neu: eigenständiger Flex-Container */
+  justify-content: center;    /* neu: Inhalt (selection-area + actions) zentrieren */
+  align-items: flex-start;    /* neu: Start oben ausrichten */
+}
+
+/* Die Auswahl selbst: Block mittig halten */
+
+/* Grid: 2 Spalten (Label + Select) */
+.selection-area.selection-area--centered {
+  display: inline-grid;
+  grid-template-columns: 200px 260px;
+  gap: 16px 24px;
+  align-content: start;
+  justify-content: center;   /* Block selbst mittig */
+  margin: 0 auto;            /* Block mittig in der Center-Spalte */
+}
+
+/* Button-Zeile: unter den beiden Spalten, zentriert */
+.selection-area .actions.actions--in-grid {
+  grid-column: 1 / -1;       /* über beide Spalten */
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;           /* kleiner Abstand zur Auswahl */
+}
+
+/* Falls du .center-col.center-col--full bereits zentriert hast:
+   Sorgt dafür, dass die selection-area als Block mittig bleibt */
+.center-col.center-col--full {
+  flex: 0 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* Optional: die Labels rechtsbündig belassen (wie gewohnt) */
+.field-label {
+  justify-self: end;
+  background-color: #D6C8FF;
+  font-weight: 600;
+  
+}
+
+/* Gemeinsamer Style für beide Selects */
+#select-language:hover,
+#select-mode:hover {
+    background-color: #F3EEFF; /* Hintergrundfarbe beim Hover */
+    box-shadow: 0 0 6px rgba(214, 200, 255, 0.4);
+    color: #000; /* Textfarbe für guten Kontrast */
+    border: 1px solid #A89BEF; /* leicht dunklere Umrandung */
+    cursor: pointer; /* Zeigt an, dass es klickbar ist */
+    transition: all 0.3s ease; /* sanfter    transition: all 0.3s ease; /* sanfter Übergang */
+}
+
+#select-language,
+#select-mode {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}

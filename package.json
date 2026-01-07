@@ -1,13 +1,11 @@
 {
-  "name": "istqb-ct-ai-exam",
+  "name": "Expleo-SkillCheck",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "electron": "^39.1.1",
-    "electron-builder": "^26.0.12"
+  "dependencies": {
+    "express": "^4.21.0"
   }
 }

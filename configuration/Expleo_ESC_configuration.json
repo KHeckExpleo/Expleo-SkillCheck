@@ -1,0 +1,16 @@
+
+{
+  "licencePeriod_description": "Dauer der Lizenz in Tagen",
+  "licencePeriod": 30,
+  "limeLimitMinutes_description": "Zeitlimit für die Prüfung in Minuten",
+  "timeLimitMinutes": 120,
+  "passingPercentage_description": "Mindestprozentsatz zum Bestehen der Prüfung",
+  "passingPercentage": 65,
+  "usedSyllabus_description": "Verwendetes Syllabus für die Prüfung, bzw. Thema der Prüfung: ISTQB Kurzbezeichnung",
+  "usedSyllabus": "CT-AI",
+  "usedQuestionCatalog_description": "Pfad und Datei mit den Prüfungsfragen",
+  "usedQuestionCatalog": "./exams/{syllabus}-Questions_{mode}_{lang}.json",
+  "usedUI_description": "Pfad und Datei mit den UI-Texten",
+  "usedUI": "./configuration/Expleo_ESC_configuration_UItext_{lang}.json",
+  "supportedLanguages": ["de", "en", "fr"]
+}

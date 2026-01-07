@@ -1,0 +1,1057 @@
+﻿[
+  {
+    "LearningObjective": "AI-1.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q1",
+        "QuestionText": "Laquelle des affirmations suivantes fournit le MEILLEUR exemple de l'« effet IA » ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Les gens perdent leur emploi parce que les systèmes basés sur l'IA accomplissent leurs tâches mieux et à moindre coût.",
+          "b": "Les jeux vidéo compétitifs perdent en popularité, car les systèmes basés sur l'IA gagnent toujours.",
+          "c": "Les systèmes experts basés sur des règles pour le diagnostic médical ne sont plus considérés comme de l'IA.",
+          "d": "Les gens pensent que l'IA va conquérir le monde, comme le montrent les films."
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Les personnes exerçant de nombreuses professions pourraient perdre leur emploi à cause des systèmes basés sur l'IA, mais il s'agit simplement d'un progrès et non de « l'effet IA ». Comparez la définition de l'effet IA dans le programme CT-AI, chapitre 1.1, paragraphe 3.",
+          "b": "FAUX - L'effet IA ne concerne pas la comparaison entre un système basé sur l'IA et la concurrence, mais la perception de ce qui caractérise l'IA. Comparez la définition de l'effet IA dans le programme CT-AI, chapitre 1.1, paragraphe 3.",
+          "c": "CORRECT - L'« effet IA » est défini comme le changement de définition de l'IA au fur et à mesure des progrès technologiques. Les systèmes basés sur des règles pour le diagnostic médical étaient des exemples populaires d'IA dans les années 1970 et 1980, mais ils ne sont souvent plus considérés comme de l'IA aujourd'hui. Voir le programme CT-AI, chapitre 1.1, paragraphe 2, deuxième partie.",
+          "d": "FAUX - La crédulité des cinéphiles qui croient que des robots tueurs vont conquérir le monde n'est pas « l'effet IA ». Voir le programme CT-AI, chapitre 1.1, paragraphe 2 sur la compétition aux échecs."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-1.4.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K1",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q2",
+        "QuestionText": "Parmi les options suivantes, laquelle n'est PAS une technologie utilisée pour mettre en œuvre l'IA ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Machines à vecteur de support",
+          "b": "Arbres de décision",
+          "c": "TensorFlow",
+          "d": "Modèles bayésiens"
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Les machines à vecteurs de support sont une forme d'apprentissage automatique. Voir le programme CT-AI, chapitre 1.4.",
+          "b": "FAUX - Les arbres de décision sont une forme d'apprentissage automatique. Voir le programme CT-AI, chapitre 1.4.",
+          "c": "CORRECT - TensorFlow n'est pas une technique d'IA, mais un cadre de développement concret pour l'IA. Voir le programme CT-AI, chapitre 1.5, dernier point.",
+          "d": "FAUX - Les modèles bayésiens sont une forme d'apprentissage automatique. Voir le programme CT-AI, chapitre 1.4."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-1.6.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q3",
+        "QuestionText": "Parmi les affirmations suivantes concernant le matériel utilisé pour mettre en œuvre des systèmes basés sur l'IA, laquelle est la plus susceptible d'être VRAIE ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Les processeurs utilisés pour entraîner un système de recommandation mobile doivent être identiques à ceux du téléphone mobile.",
+          "b": "Les processeurs graphiques (GPU) constituent un bon choix pour la mise en œuvre d'un système de traitement d'images basé sur l'IA.",
+          "c": "Les systèmes d'apprentissage profond doivent être formés, évalués et testés à l'aide de puces spécifiques à l'IA.",
+          "d": "Il est toujours préférable de choisir des processeurs avec plus de bits afin d'obtenir une précision suffisante pour les systèmes basés sur l'IA."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Les deux activités que sont l'entraînement d'un modèle ML et l'inférence à partir de ce modèle sont très différentes, il n'y a donc généralement aucune raison de les effectuer sur les mêmes processeurs. Voir le programme CT-AI, chapitre 1.6, paragraphe 1.",
+          "b": "CORRECT - Les processeurs graphiques sont conçus pour le traitement parallèle d'images avec des milliers de cœurs, ce qui correspond à peu près à ce qui est nécessaire pour un système de vision par ordinateur basé sur l'IA, qui serait très probablement mis en œuvre sous forme de réseau neuronal. Voir le programme CT-AI, chapitre 1.6, paragraphe 3, phrase 2.",
+          "c": "FAUX - Il est toujours possible de former, d'évaluer et de tester un système d'apprentissage profond simple sur un PC avec une prise en charge GPU limitée. Aucune puce spéciale pour l'IA n'est donc nécessaire, mais celles-ci seraient beaucoup plus rapides. Comparez le programme CT-AI, chapitre 1.6, paragraphe 1, phrases 1 et 2 : les processeurs universels sont également possibles.",
+          "d": "FAUX - De nombreux systèmes basés sur l'IA ne se concentrent pas sur des calculs exacts, mais plutôt sur des déterminations probabilistes, de sorte que la précision des processeurs à plusieurs bits est souvent inutile. Voir le programme CT-AI, chapitre 1.6, paragraphe 2, point 1."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-1.8.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q4",
+        "QuestionText": "Laquelle des options suivantes décrit un risque réaliste lié au transfert d'apprentissage d'un nouveau modèle basé sur un modèle pré-entraîné ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Les scientifiques des données chargés de cette tâche ne connaissent pas la fonction requise du nouveau modèle.",
+          "b": "L'apprentissage par transfert réduit la transparence des parties réutilisées du modèle pré-entraîné.",
+          "c": "Les distorsions provenant du modèle pré-entraîné pourraient être reprises sans être détectées.",
+          "d": "L'utilisation des mêmes étapes de préparation des données pour les deux modèles peut entraîner des performances fonctionnelles différentes."
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Les scientifiques des données chargés de cette tâche ne connaissent généralement pas les différences. Voir le programme CT AI, chapitre 1.8.3, point 2. Ils devraient très bien connaître la fonction du nouveau (!) modèle. Après tout, c'est leur travail. À cet égard, cela pourrait bien constituer un risque général. Cependant, cela n'est pas spécifique à l'apprentissage par transfert.",
+          "b": "FAUX - Le modèle pré-entraîné peut plutôt manquer de transparence et ce manque peut être repris. Cela signifie que, dans l'ensemble, la transparence du nouveau modèle peut être inférieure à celle d'un modèle entièrement nouveau. Voir le programme CT AI, chapitre 1.8.3, points 1, 4 et 5. Cependant, la réutilisation n'a aucune influence sur la transparence des éléments réutilisés eux-mêmes.",
+          "c": "CORRECT - Des insuffisances telles que des distorsions dans le modèle pré-entraîné peuvent être reprises sans être détectées. Voir le programme CT AI, chapitre 1.8.3, point 4.",
+          "d": "FAUX - L'utilisation de différentes étapes de préparation des données peut entraîner des performances fonctionnelles différentes. Voir le programme CT AI, chapitre 1.8.3, point 3. L'utilisation des mêmes étapes pourrait entraîner des insuffisances. Cela n'entraînerait toutefois pas de performances fonctionnelles différentes."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-2.2.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q5",
+        "QuestionText": "Laquelle des affirmations suivantes est LA PLUS APPROPRIÉE pour spécifier une exigence relative à l'autonomie d'un système basé sur l'IA ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Le système doit maintenir une distance de sécurité avec les autres véhicules jusqu'à ce que le conducteur actionne le frein ou l'accélérateur.",
+          "b": "Le système doit apprendre le mode de réponse préféré aux e-mails grâce à la surveillance à distance du trafic e-mail.",
+          "c": "Le système compare ses prévisions concernant les prix immobiliers aux prix de vente réels afin de déterminer s'il doit être réentraîné.",
+          "d": "Il doit être possible de modifier le comportement du système en moins d'une journée afin qu'il fonctionne avec différents types d'utilisateurs.I"
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Cette exigence définit les interventions humaines qui déterminent la fin du fonctionnement autonome du système. Voir le programme CT-AI, chapitre 2.2, paragraphe 3 : « Dans ce programme, l'autonomie est considérée comme la capacité du système à fonctionner pendant de longues périodes sans supervision ni contrôle humains.",
+          "b": "FAUX - Cette exigence spécifie une fonction requise, à savoir que le système doit fonctionner de manière autonome. Elle ne fait aucune référence au fait que le système doit fonctionner indépendamment de l'intervention humaine. Voir le programme CT-AI, chapitre 2.2, paragraphe 3.",
+          "c": "FAUX - Cette exigence définit la manière dont le système gère l'écart conceptuel, qui dans ce cas est très probablement causé par des changements sur le marché immobilier. Il n'est pas fait référence ici à la question de savoir si le système doit fonctionner indépendamment de l'intervention humaine. Voir le programme CT-AI, chapitre 2.2, paragraphe 3.",
+          "d": "FAUX - Il s'agit d'une exigence en matière d'adaptabilité, c'est-à-dire le temps maximal nécessaire pour modifier le système. Il n'est pas fait référence ici au fait que le système doit fonctionner indépendamment de l'intervention humaine. Voir le programme CT-AI, chapitre 2.2, paragraphe 3."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-2.4.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q6",
+        "QuestionText": "Laquelle des affirmations suivantes concernant les distorsions dans les systèmes basés sur l'IA n'est PAS correcte ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Les préjugés peuvent être causés par le fait que les utilisateurs d'un système de recommandation de livres prennent des décisions qui incitent délibérément le système à faire de mauvaises suggestions.",
+          "b": "Le système permettant de prédire l'âge de décès des employés peut être faussé si les données d'entraînement proviennent d'un ensemble de données concernant des patients qui sont tous à la retraite.",
+          "c": "L'utilisation de données d'entraînement provenant de personnes qui possèdent et utilisent une carte de crédit peut entraîner des distorsions dans le système d'évaluation de la solvabilité.",
+          "d": "Le système de navigation peut être faussé par l'utilisation d'un algorithme de calcul d'itinéraire trop complexe pour être expliqué à des utilisateurs lambda."
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - Les préjugés peuvent être causés par le fait que les utilisateurs altèrent délibérément la capacité d'auto-apprentissage d'un système basé sur l'IA. Voir « Biais d'échantillonnage » dans le programme CT-AI, chapitre 2.4, paragraphe 3, point 2.",
+          "b": "FAUX - Un biais peut apparaître lorsque les données d'entraînement ne correspondent pas correctement aux personnes auxquelles le système doit être appliqué. Par exemple, les employés sont généralement plus jeunes que les patients à la retraite. Voir « Biais d'échantillonnage » dans le programme CT-AI, chapitre 2.4, paragraphe 3, point 2.",
+          "c": "FAUX - Un biais peut apparaître lorsque les données d'entraînement ne correspondent pas correctement aux personnes auxquelles le système doit être appliqué. Par exemple, la plupart des utilisateurs de cartes de crédit sont déjà considérés comme solvables, ce qui est un exemple typique de biais d'échantillonnage. Voir « Biais d'échantillonnage » dans le programme CT-AI, chapitre 2.4, paragraphe 3, point 2.",
+          "d": "CORRECT - Si l'algorithme ne peut être expliqué, cela signifie qu'il manque d'explicabilité, mais cela ne signifie pas qu'il est biaisé ou impartial, ni qu'il y a distorsion. L'explicabilité peut renforcer la confiance, voir le programme CT-AI, chapitre 2.8, deuxième liste à puces, point 3."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-2.6.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q7",
+        "QuestionText": "Lequel des cas suivants est le PLUS PROCHE d'un exemple de piratage de récompenses ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "L'outil d'aide à la programmation optimise le code afin de réduire les temps de réponse tout en garantissant le respect des exigences fonctionnelles.",
+          "b": "Un appareil d'anesthésie destiné à maintenir les patients dans un état stable pendant l'opération administre des doses trop importantes, ce qui empêche les patients de se réveiller aussi rapidement que prévu.",
+          "c": "L'organisation de développement tierce rémunérait ses programmeurs IA en fonction du nombre de lignes de code qu'ils écrivaient.",
+          "d": "Un type d'IA utilisé dans les jeux vidéo contre des humains et visant à obtenir le meilleur score possible."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Il semble que l'instrument atteigne ses deux objectifs et n'ait aucun effet négatif, il ne s'agit donc probablement pas d'un « piratage de récompense ». Le piratage de récompense entraîne des fonctions inattendues, voire nuisibles, voir le programme CT-AI, chapitre 2.7, phrase 1.",
+          "b": "CORRECT - Il pourrait s'agir d'un « piratage de récompense » (voir le programme CT-AI, chapitre 2.7, phrase 1) si le système atteint un objectif au détriment d'autres personnes, dans ce cas la nécessité que les patients se réveillent.",
+          "c": "FAUX - Le piratage de récompenses n'est pas une forme de rémunération des développeurs d'IA. Voir le programme CT-AI, chapitre 2.7, phrase 1.",
+          "d": "FAUX - Certains systèmes ludiques basés sur l'IA sont contrôlés par une fonction de récompense, mais il ne s'agit pas d'un « piratage de récompense » impliquant des résultats inattendus ou nuisibles, voir le programme CT-AI, chapitre 2.7, phrase 1."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-2.8.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K1",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q8",
+        "QuestionText": "Parmi les caractéristiques suivantes d'un système basé sur l'IA, lesquelles sont susceptibles de poser des difficultés si ce système est utilisé dans un domaine lié à la sécurité ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Probabiliste",
+          "b": "Explicable",
+          "c": "Interprétable",
+          "d": "Déterministe"
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Probabiliste - un problème évident pour les systèmes liés à la sécurité, voir le programme CT-AI, chapitre 2.9 (en fait 2.8, si 2.5 ne manquait pas), point 3. ",
+          "b": "FAUX - Expliquable - généralement nécessaire pour les systèmes liés à la sécurité et donc sans problème, voir le programme CT-AI, chapitre 2.8, dernier point « Expliquabilité ».",
+          "c": "FAUX - Interprétable - généralement nécessaire pour les systèmes liés à la sécurité et donc sans problème, voir le programme CT-AI, chapitre 2.8, avant-dernier point « Interprétabilité ».",
+          "d": "FAUX - Déterministe - généralement requis pour les systèmes liés à la sécurité, voir également le programme CT-AI, chapitre 2.9, deuxième point « Non-déterminisme », qui décrit un problème. Le déterminisme n'est donc pas un problème."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-3.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q9",
+        "QuestionText": "Laquelle des affirmations suivantes décrit LE MIEUX la classification et la régression dans le contexte de l'apprentissage supervisé ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "La régression permet de vérifier que les résultats des tests du modèle ML ne changent pas lorsque les mêmes données de test sont exécutées.",
+          "b": "La classification désigne le classement de données non identifiées en quelques catégories prédéfinies.",
+          "c": "La classification consiste à étiqueter les données pour l'entraînement du modèle ML.",
+          "d": "La régression consiste à prédire le nombre de classes générées par le modèle ML."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Dans le contexte de l'apprentissage supervisé, la régression signifie généralement que le modèle ML produit un résultat numérique. Comparer la définition de la régression dans le programme CT-AI, chapitre 3.1.1, paragraphe 2, point 2 et paragraphe 3.",
+          "b": "CORRECT - Lors de la classification, les données saisies pour un modèle ML sont classées dans l'une des nombreuses classes prédéfinies. Voir la définition de la classification dans le programme CT-AI, chapitre 3.1.1, paragraphe 2, point 1.",
+          "c": "FAUX - Pour l'entraînement dans le cadre de l'apprentissage supervisé, les données doivent être étiquetées, mais cette activité n'est pas appelée classification. Dans le contexte de l'apprentissage supervisé, la classification signifie généralement que le modèle ML classe une entrée dans l'une des quelques classes prédéfinies. Comparez la définition de la classification dans le programme CT-AI, chapitre 3.1.1, paragraphe 2, point 1.",
+          "d": "FAUX - La régression signifie que la sortie du modèle ML est numérique, mais la sortie n'est pas un nombre de classes. Un exemple de déclaration numérique est la prédiction de l'âge d'une personne sur la base des données saisies. Comparez la définition de la régression dans le programme CT-AI, chapitre 3.1.1, paragraphe 2, point 2."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-3.1.3",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q10",
+        "QuestionText": "Laquelle des options suivantes décrit LE MIEUX un exemple d'apprentissage par renforcement ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "L'application de jeux mobile met à jour ses commentaires, son temps de réponse et le nombre d'options utilisateur qu'elle propose en fonction des dépenses des joueurs.",
+          "b": "L'application de traduction linguistique recherche sur Internet des textes dans plusieurs langues afin d'améliorer la fonction de traduction.",
+          "c": "Le système de contrôle qualité de l'usine utilise des caméras vidéo et des analyses audio pour identifier les produits défectueux, qui sont ensuite contrôlés par un employé chargé du contrôle qualité.",
+          "d": "Le système de prédiction des tests de composants logiciels utilise une série de critères de qualité pour déterminer quels composants sont susceptibles de contenir le plus d'erreurs."
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Le montant dépensé peut être considéré comme la fonction de récompense de ce système, celui-ci modifiant son comportement afin d'augmenter le montant dépensé. Comparer avec la définition de l'apprentissage par renforcement dans le programme CT-AI, chapitre 3.1.3, paragraphe 1.",
+          "b": "FAUX - L'application utilise du texte dans une langue qui peut être considérée comme la langue source et une traduction « corrective » de cette source. Le texte et la traduction forment des paires de données d'entrée. L'application s'appuie donc sur une forme d'apprentissage supervisé, sans mentionner de fonction de récompense. Veuillez comparer la définition de l'apprentissage supervisé à celle de l'apprentissage par renforcement dans le programme CT-AI, chapitre 3.1.1, paragraphe 1 et chapitre 3.1.3, paragraphe 1.",
+          "c": "FAUX - Le système utilise le contrôleur qualité humain comme une sorte de « référence absolue » et s'appuie ainsi sur une forme d'apprentissage supervisé. Comparez la définition de l'apprentissage supervisé à celle de l'apprentissage par renforcement dans le programme CT-AI, chapitre 3.1.1, paragraphe 1 et chapitre 3.1.3, paragraphe 1.",
+          "d": "FAUX - Rien n'indique qu'une fonction de récompense telle que celle utilisée dans l'apprentissage par renforcement soit utilisée. Il est au contraire très probable que le système de prédiction base sa détermination des erreurs sur des expériences antérieures. Il s'appuie donc probablement sur un système d'apprentissage supervisé. Comparez la définition de l'apprentissage par renforcement dans le programme CT-AI, chapitre 3.1.3, paragraphe 1."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-3.3.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K3",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q11",
+        "QuestionText": "On vous a demandé votre avis sur l'approche ML qui sera utilisée pour un nouveau système faisant partie de la gestion du trafic d'une ville SMART. L'idée est que le nouveau système contrôle les feux de circulation dans la ville afin d'assurer une circulation fluide à travers et autour de la ville.\nSelon vous, laquelle des approches suivantes a le plus de chances de réussir ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Apprentissage non supervisé basé sur l'identification de zones urbaines où la densité du trafic est supérieure à la moyenne.",
+          "b": "Une solution de régression avec apprentissage supervisé, basée sur des milliers de trajets caractérisés à la fois par leur longueur et leur durée.",
+          "c": "Apprentissage par renforcement basé sur une fonction de récompense qui pénalise les solutions conduisant à une congestion accrue du trafic.",
+          "d": "Une solution de classification avec apprentissage supervisé, basée sur les itinéraires préférés indiqués par les conducteurs et les passagers pour se déplacer en ville."
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Le système d'apprentissage non supervisé devrait être capable d'identifier les zones encombrées, mais cela ne résout pas le problème en soi, car la simple détection de l'encombrement ne contribue pas à optimiser la fluidité du trafic. Voir la définition de l'apprentissage non supervisé dans le programme CT-AI, chapitre 3.1.2, paragraphe 1, et les lignes directrices pour choisir un type de ML dans le programme CT-AI, chapitre 3.3, points 6 à 8.",
+          "b": "FAUX - Il est peu probable qu'une solution de régression permette d'obtenir le résultat souhaité, car la vitesse prévue pour chaque trajet n'offre pas de solution globale au problème de congestion dans toute la ville. Voir la définition de la régression dans l'apprentissage supervisé dans le programme CT-AI, chapitre 3.1.1, paragraphe 2, point 2, et les lignes directrices pour choisir un type de ML dans le programme CT-AI, chapitre 3.3, point 5.",
+          "c": "CORRECT - Un système d'apprentissage renforcé en constante amélioration, avec une fonction de récompense basée sur un niveau de surcharge plus faible comme mesure du succès, est valable pour ce type de système. De plus, le système interagit ici avec l'environnement via le contrôle par feux tricolores. Veuillez vous référer à la définition de l'apprentissage par renforcement dans le programme CT-AI, chapitre 3.1.3, paragraphe 1, et aux lignes directrices pour la sélection d'un type de ML dans le programme CT-AI, chapitre 3.3, point 9.",
+          "d": "FAUX - Cette solution repose sur les opinions subjectives des bénévoles, ce qui conduira très probablement à une solution qui changera constamment lorsque le système adoptera des itinéraires préférés qui seront ensuite saturés. Voir la définition de la classification dans l'apprentissage supervisé dans le programme CT-AI, chapitre 3.1.1, paragraphe 2, point 1, et les lignes directrices pour choisir un type de ML dans le programme CT-AI, chapitre 3.3, point 4."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-3.5.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q12",
+        "QuestionText": "Lors du test d'un modèle entraîné, un ingénieur ML a constaté que le modèle était très précis lors de l'évaluation avec des données de validation, mais qu'il obtenait de mauvais résultats avec des données de test indépendantes.\nLaquelle des options suivantes est la PLUS SUSCEPTIBLE d'avoir causé cette situation ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Inadaptation",
+          "b": "Dérive conceptuelle",
+          "c": "suradaptation",
+          "d": "Mauvais critères d'acceptation"
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Le modèle obtient de bons résultats avec les données de validation, il ne s'agit donc pas d'un sous-ajustement. Voir la définition du sous-ajustement dans le programme CT-AI, chapitre 3.5.2.",
+          "b": "FAUX - La dérive conceptuelle fait référence aux modifications apportées après la phase d'entraînement et de validation du modèle. Voir les explications sur la dérive conceptuelle dans le programme CT-AI, chapitre 7.6, paragraphe 1.",
+          "c": "CORRECT - Les mauvaises performances obtenues lors des tests indépendants et les bonnes performances obtenues lors de la validation suggèrent un surajustement. Voir la définition du surajustement dans le programme CT-AI, chapitre 3.5.1.",
+          "d": "FAUX - Les critères d'acceptation inadéquats doivent être cohérents avec différents ensembles de données, de sorte qu'il est peu probable qu'ils entraînent une différence entre les résultats des tests avec les données de validation et les données de test indépendantes. Cela découle de l'équivalence requise entre les ensembles de données d'entraînement, de validation et de test. Veuillez vous référer aux explications sur les ensembles de données dans le flux de travail ML dans le programme CT-AI, chapitre 4.2, paragraphe 1."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-4.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q13",
+        "QuestionText": "Parmi les exemples suivants, lequel représente un défi pouvant survenir lors du développement et du test d'une solution ML ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "L'anonymisation des données nécessite généralement la maîtrise de différents algorithmes ML.",
+          "b": "Les données utilisées peuvent être des données non structurées.",
+          "c": "Une grande partie du budget est consacrée uniquement au traitement des données.",
+          "d": "L'évolutivité du pipeline de données est un défi lors de l'entraînement du modèle."
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - L'anonymisation des données ne nécessite aucune connaissance des algorithmes d'apprentissage automatique. Il s'agit d'un défi dans l'obtention de données de test. Comparez les données de test pour tester les systèmes basés sur l'IA dans le programme CT-AI, chapitre 7.3, point 3.",
+          "b": "FAUX - Les données non structurées ne constituent pas un défi. Les images, les fichiers audio et le texte libre sont tous des exemples de données non structurées. Même le prétraitement des données, par exemple par nettoyage, conversion ou enrichissement dans le cadre de la préparation des données, ne modifie pas la nature fondamentale des données non structurées. Veuillez vous référer à la préparation des données dans le cadre du flux de travail ML dans le programme CT-AI, chapitre 4.1, section Prétraitement des données.",
+          "c": "CORRECT - Jusqu'à 43 % de l'effort nécessaire pour les flux de travail ML peut être consacré à la préparation des données. Comparez la préparation des données dans le cadre du flux de travail ML dans le programme CT-AI, chapitre 4.1, paragraphe 1, et les défis liés à la préparation des données dans le programme CT-AI, chapitre 4.1.1, point 4.",
+          "d": "FAUX - L'évolutivité est généralement une exigence lors du déploiement du pipeline de données de production et non lors de la formation. Comparez les défis liés à la préparation des données dans le programme CT-AI, chapitre 4.1.1, point 3, et les différences entre les pipelines de données pour la formation et l'exploitation dans le programme CT-AI, chapitre 7.2.1, paragraphe 2."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-4.3.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q14",
+        "QuestionText": "Les données utilisées pour l'entraînement sont insuffisantes.\nLaquelle des options suivantes correspond le mieux à ce problème de qualité des données ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Il est particulièrement fastidieux d'entraîner le modèle avec les données disponibles. En revanche, si une partie de l'ensemble de données n'est pas utilisée pour l'entraînement, celui-ci aboutit plus rapidement à des résultats positifs.",
+          "b": "Le modèle fonctionne de manière correcte, mais privilégie excessivement certaines configurations dans ses prévisions.",
+          "c": "Des données clients réelles sont utilisées pour l'entraînement du modèle, bien que le consentement des clients n'ait pas été obtenu.",
+          "d": "Le modèle ne peut pas être entraîné avec un algorithme spécifique, bien que d'autres algorithmes fonctionnent avec les mêmes données d'entraînement."
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - Étant donné que l'entraînement du modèle est particulièrement complexe et donc gourmand en ressources, cela indique la présence de données non pertinentes dans l'ensemble de données. En revanche, si les données non pertinentes ne sont pas utilisées lors de l'entraînement, celui-ci est terminé plus rapidement. Voir l'explication sur les données non pertinentes dans le programme CT-AI, chapitre 4.3, tableau 1, ligne 11.",
+          "b": "FAUX - Il s'agit d'un modèle biaisé qui peut être causé par des données incomplètes, déséquilibrées, injustes, peu diversifiées ou redondantes. Voir l'explication du modèle biaisé dans le programme CT-AI, chapitre 4.4, paragraphe 2, point 2.",
+          "c": "FAUX - Les questions relatives à la protection des données n'ont pas été prises en compte ici. Voir l'explication sur les questions relatives à la protection des données dans le programme CT-AI, chapitre 4.3, tableau 1, ligne 12.",
+          "d": "CORRECT - Le fait que les modèles basés sur certains algorithmes d'apprentissage puissent être entraînés avec les données, mais que cela ne fonctionne pas avec un algorithme particulier, est très probablement dû au fait que la quantité de données est insuffisante pour cet algorithme particulier. La quantité minimale de données requise peut varier selon les algorithmes. Voir l'explication relative à l'insuffisance des données dans le programme CT-AI, chapitre 4.3, tableau 1, ligne 5."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-4.4.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q15",
+        "QuestionText": "DataSure est une start-up qui propose un produit promettant d'améliorer la qualité des modèles d'apprentissage automatique. DataSure affirme que cette amélioration est obtenue en vérifiant que les données ont été étiquetées de manière correcte.\nLequel des défauts suivants aurait pu être évité le plus facilement grâce à l'utilisation de ce produit ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Le modèle présente des failles de sécurité.",
+          "b": "Le modèle a une faible précision.",
+          "c": "Le modèle fournit des résultats qui sont jugés déséquilibrés.",
+          "d": "Le modèle fournit des résultats faussés."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Les questions de confidentialité et de sécurité ne sont pas abordées. Par conséquent, le produit n'empêchera pas les problèmes de sécurité. Comparez la qualité des données et son impact sur le modèle ML dans le programme CT-AI, chapitre 4.4, paragraphe 2, point 3.",
+          "b": "CORRECT - Des données mal étiquetées réduisent la précision du modèle ML. Comparez la qualité des données et son impact sur le modèle ML dans le programme CT-AI, chapitre 4.4, paragraphe 2, point 1.",
+          "c": "FAUX - Un modèle qui fournit des résultats jugés déséquilibrés résulte de données injustes, et non de données mal étiquetées. Voir l'explication sur les données injustes dans le programme CT-AI, chapitre 4.3, tableau 1, ligne 9.",
+          "d": "FAUX - Un modèle biaisé résulte davantage de données incomplètes, déséquilibrées, injustes, insuffisamment diversifiées ou dupliquées que de données mal étiquetées. Comparez la qualité des données et son impact sur le modèle ML dans le programme CT-AI, chapitre 4.4, paragraphe 2, point 2."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-4.5.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K1",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q16",
+        "QuestionText": "Lorsqu'un ingénieur ML constate que les données d'entraînement sont insuffisantes, il fait pivoter les images marquées afin de créer des données d'entraînement supplémentaires.\nLaquelle des approches suivantes en matière d'étiquetage est appliquée dans cet exemple ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Externalisation ouverte",
+          "b": "Interne",
+          "c": "Assisté par IA",
+          "d": "Externalisé"
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Le crowdsourcing signifie qu'un grand nombre de personnes se chargent d'une tâche spécifique. Dans ce cas, une seule personne effectue la tâche. Comparez la définition de « crowdsourced » dans le programme CT-AI, chapitre 4.5.1, paragraphe 1, point 3.",
+          "b": "CORRECT - Ici, l'enrichissement des données déjà étiquetées est effectué par le développeur ML lui-même, c'est-à-dire au sein de l'entreprise responsable de l'étiquetage des données. Comparer la définition de l'étiquetage interne dans le programme CT-AI, chapitre 4.5.1, paragraphe 1, point 1.",
+          "c": "FAUX - L'IA n'est pas utilisée pour marquer les données. Comparez la définition du marquage assisté par l'IA dans le programme CT-AI, chapitre 4.5.1, paragraphe 1, point 4.",
+          "d": "FAUX - L'ingénieur ML n'a pas externalisé la tâche à un tiers. Voir la définition du marquage externalisé dans le programme CT-AI, chapitre 4.5.1, paragraphe 1, point 2."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-5.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K3",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q17",
+        "QuestionText": "Considérez la matrice de confusion suivante pour un classificateur d'images :\nMatrice de confusion | Réellement positif | Réellement négatif |\nPrévisions positives | 78 | 22 |\nPrévision négative | 6 | 14 |.\nLaquelle des options suivantes représente la précision du classificateur ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "20/120 *100%",
+          "b": "78/120 *100%",
+          "c": "78/100 *100%",
+          "d": "22/100 *100%"
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Voir la réponse c) pour la formule et le calcul corrects.",
+          "b": "FAUX - Voir la réponse c) pour la formule et le calcul corrects.",
+          "c": "CORRECT - La formule pour la précision = RP/(RP+FP)*100 % = 78/(78+22)*100% = 78/100*100 % (voir chap. 5.1, 3e paragraphe, 2e point « Précision »).",
+          "d": "FAUX - Voir la réponse c) pour la formule et le calcul corrects."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-5.2.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q18",
+        "QuestionText": "Il existe différentes mesures de performance fonctionnelles pour les différents types de problèmes ML.\nLaquelle des affirmations suivantes est CORRECT ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "La surface sous la courbe (AUC) indique dans quelle mesure le modèle est adapté aux variables dépendantes.",
+          "b": "L'erreur quadratique moyenne (MQF) indique, à partir de la mesure de la courbe ROC, dans quelle mesure le modèle distingue les différentes classes.",
+          "c": "La métrique R-carré représente la capacité de séparation du classificateur, c'est-à-dire la capacité du modèle à distinguer les classes.",
+          "d": "La valeur de silhouette est basée sur la mesure des distances moyennes entre les clusters et au sein des clusters des points de données."
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - L'aire sous la courbe (AUC) représente le degré de séparabilité d'un classificateur (voir chap. 5.2, 2e paragraphe, 2e point). Le degré d'ajustement du modèle aux variables dépendantes est évalué à l'aide de la métrique R-carré (voir chap. 5.2, 3e paragraphe, 2e point).",
+          "b": "FAUX - L'erreur quadratique moyenne est la moyenne des différences au carré entre la valeur réelle et la valeur prédite (voir chap. 5.2, 3e paragraphe, 1er point). La surface sous la courbe (AUC) indique dans quelle mesure le modèle distingue les différentes classes (voir chap. 5.2, 2e paragraphe, 2e point).",
+          "c": "FAUX - La métrique R-carré est appliquée à la régression supervisée (voir chap. 5.2, 3e paragraphe, 2e point) et non pour les problèmes de classification, comme le montre l'aire sous la courbe (AUC) (voir chap. 5.2, 2e paragraphe, mesures pour la classification supervisée, 2e point).",
+          "d": "CORRECT - voir le programme d'études sur l'IA, section 5.2, 4e paragraphe (mesures pour le regroupement non supervisé), 3e point."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-5.4.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K4",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q19",
+        "QuestionText": "KnowYourPet est une application qui utilise le ML pour déterminer si un animal a faim ou non. Elle part du principe qu'un chien n'a généralement pas faim, comme le montrent les données d'entraînement. Si le chien est classé à tort comme ayant faim, cela peut entraîner une suralimentation, qui peut à son tour entraîner de graves problèmes de santé.\nParmi les indicateurs suivants, lesquels choisiriez-vous pour déterminer l'adéquation du modèle à tester ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Précision",
+          "b": "Précision",
+          "c": "Rappel",
+          "d": "Note F1"
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - La précision (RP + RN) / (RP + RN + FP + FN) n'est pas très pertinente lorsqu'il existe un déséquilibre entre les classes attendues, que la classe non affamée (FP+RN) domine dans ce cas et que seuls les résultats faussement positifs FP importants sont dangereux (suralimentation). Précision : voir chap. 5.1, 3e paragraphe, 1er point.",
+          "b": "CORRECT - Il convient d'utiliser la précision RP / (RP + FP) * 100%, car les coûts liés aux résultats faux positifs FP (suralimentation du chien) sont élevés (problèmes de santé graves) et cela n'a d'effet déterminant que sur la précision (voir chap. 5.1, 3e paragraphe, 2e point).",
+          "c": "FAUX - La sensibilité est utile lorsque l'on considère les cas réellement positifs RP+FN. Dans le cas présent, ce sont toutefois les cas faussement positifs FP qui sont très importants, et ceux-ci ne sont pas pris en compte dans le calcul de la sensibilité (voir chap. 5.1, 3e paragraphe, 3e point).",
+          "d": "FAUX - Le score F1 est utile lorsqu'il existe un déséquilibre entre les classes attendues et lorsque la précision et la sensibilité ont une importance similaire. Dans le cas présent, la précision est toutefois beaucoup plus importante que la sensibilité (voir les justifications des réponses b et c). Score F1 : voir chap. 5.1, 3e paragraphe, 4e point."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-6.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q20",
+        "QuestionText": "Laquelle des options suivantes décrit LE MIEUX un réseau neuronal profond ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Il se compose d'une structure hiérarchique de neurones, les neurones les plus bas (les plus profonds) prenant la plupart des décisions.",
+          "b": "Il est constitué de neurones interconnectés, chaque neurone ayant un biais et chaque connexion ayant un poids.",
+          "c": "Il se compose de plusieurs couches, chacune d'entre elles (à l'exception des couches d'entrée et de sortie) étant reliée à toutes les autres, et les erreurs se propagent à rebours à travers le réseau.",
+          "d": "Il est constitué de couches de neurones, chacune générant une valeur d'activation basée sur les autres neurones de la même couche."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Un réseau neuronal n'a pas de structure hiérarchique avec un classement de « haut » en « bas », mais des couches : couche d'entrée, couche de sortie et couches cachées entre les deux. Il n'y a pas de règle concernant le nombre de décisions prises par les neurones dans une couche (voir chap. 6.1, 3e paragraphe).",
+          "b": "CORRECT - Un réseau neuronal artificiel est constitué de neurones interconnectés. Afin de calculer une valeur d'activation, un biais est attribué à chaque neurone et un poids à chaque connexion (voir chap. 6.1, 5e paragraphe).",
+          "c": "FAUX - Un réseau neuronal est constitué de plusieurs couches, et les erreurs sont propagées à travers le réseau de manière rétroactive, mais les couches d'un réseau neuronal ne sont connectées qu'aux couches suivantes, et non à toutes les autres couches (voir chap. 6.1, 4e paragraphe).",
+          "d": "FAUX - Un réseau neuronal est constitué de couches de neurones, mais la valeur d'activation est basée sur les neurones de la couche précédente, et non sur ceux de la même couche (voir chap. 6.1, 5e paragraphe)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-6.2.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q21",
+        "QuestionText": "Laquelle des affirmations suivantes décrit de manière APPROPRIÉE un critère de couverture pour les réseaux neuronaux ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "La couverture de variation de valeur repose sur le fait que certains neurones influencent la sortie globale du réseau neuronal.",
+          "b": "Le dépassement du seuil est basé sur les neurones qui émettent une valeur d'activation supérieure à une valeur définie.",
+          "c": "Le recouvrement neuronal est une mesure de la proportion de neurones qui sont activés à un moment donné pendant le test.",
+          "d": "La couverture de changement de signe mesure la couverture des neurones qui émettent des valeurs d'activation positives, négatives et nulles."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - La couverture de variation de valeur est une mesure de la proportion de neurones activés dont les valeurs d'activation diffèrent de plus d'une valeur de variation prédéfinie. Il ne s'agit pas de la performance globale du réseau neuronal (voir chap. 6.2, 4e paragraphe, 4e point).",
+          "b": "CORRECT - La couverture du seuil mesure la proportion de neurones qui sont activés pendant le test et dont la valeur est supérieure à un seuil prédéfini (voir chap. 6.2, 4e paragraphe, 2e point).",
+          "c": "FAUX - Tous les neurones sont potentiellement « activés » à chaque fois qu'un réseau neuronal est « exécuté », mais les valeurs émises par les neurones changent, ce qui est mesuré par la couverture neuronale. La couverture est obtenue par une valeur supérieure à zéro (voir chap. 6.2, 4e paragraphe, 1er point).",
+          "d": "FAUX - La couverture de changement de signe est une mesure de la proportion de neurones qui sont activés à la fois avec des valeurs d'activation positives et négatives, mais pas avec zéro (voir chap. 6.2, 4e paragraphe, 3e point)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-7.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q22",
+        "QuestionText": "Parmi les exigences suivantes pour un système basé sur l'IA, laquelle représente LE PLUS GRAND défi lors des tests ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Le système doit présenter une précision supérieure à celle du système qu'il remplace.",
+          "b": "La composante IA du système doit présenter une précision de 100%.",
+          "c": "Un opérateur humain doit être capable de désactiver le système en moins d'une seconde.",
+          "d": "Le système doit imiter les émotions humaines d'un joueur type."
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - Il s'agit d'une exigence spécifique, dans laquelle le système à remplacer sert d'oracle de test. Cela ne devrait donc généralement pas poser de problème lors des tests (pour la définition de « précision », voir chap. 5.1, 3e paragraphe).",
+          "b": "FAUX - Cette exigence peut être difficile à satisfaire, mais elle ne pose aucun problème pour le contrôle, car la « précision » est définie de manière exacte et vérifiable (voir chap. 5.1, 3e paragraphe).",
+          "c": "FAUX - Il s'agit d'une exigence qui peut être vérifiée à l'aide d'un test de performance (cf. chap. 4.5 du programme CTAL-TTA - Technical Test Analyst).",
+          "d": "CORRECT - Cette exigence est extrêmement complexe à tester sans définir toutes les émotions humaines et la manière dont le système pourrait les imiter (voir chap. 7.1, 2e paragraphe, 4e point)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-7.3.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K1",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q23",
+        "QuestionText": "Lequel des facteurs suivants, lié aux données de test, peut compliquer le test des systèmes basés sur l'IA ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Acquisition de mégadonnées à grande vitesse",
+          "b": "Obtention de données à partir d'une source unique",
+          "c": "Priorité excessive accordée à la vérification des erreurs introduites dans le pipeline de données",
+          "d": "L'injustice des données (une caractéristique subjective de qualité) peut rarement être constatée."
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - L'acquisition de données pour les systèmes d'IA qui utilisent de grandes quantités de données à haut débit peut s'avérer difficile (voir programme, chap. 7.3, 1er paragraphe, premier point).",
+          "b": "FAUX - Il peut être difficile d'obtenir des données de haute qualité provenant de différentes sources (voir programme, chap. 4.1.1, deuxième point). L'obtention de données provenant d'une seule source ne devrait toutefois pas poser de problème.",
+          "c": "FAUX - L'un des défis liés à la préparation des données réside dans le fait que « la vérification des erreurs introduites dans le pipeline de données ne bénéficie pas d'une priorité suffisante » (voir programme, chap. 4.1.1, avant-dernier point (principal)).",
+          "d": "FAUX - Selon le chapitre 4.3, tableau 1, ligne « Données injustes », « L'équité est un critère de qualité subjectif, mais elle peut souvent être déterminée. »"
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-7.4.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q24",
+        "QuestionText": "Laquelle des affirmations suivantes concernant le biais d'automatisation est correcte ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Dans le cas de la distorsion liée à l'automatisation, l'être humain vérifie les recommandations du système par rapport aux données provenant d'autres sources.",
+          "b": "L'attention d'un passager humain n'a rien à voir avec le biais d'automatisation.",
+          "c": "En raison du biais d'automatisation, c'est la qualité des entrées humaines qui doit être testée, et non la qualité des recommandations du système.",
+          "d": "Les décisions humaines peuvent être de moindre qualité lorsqu'elles ont été recommandées par un système basé sur l'IA."
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - « Une forme de biais lié à l'automatisation consiste pour l'être humain à accepter les recommandations du système et à ne pas tenir compte des informations provenant d'autres sources... » (voir chap. 7.4, premier point, première phrase).",
+          "b": "FAUX - L'attention d'un passager humain dans un véhicule a tout à voir avec le biais d'automatisation, car selon le programme scolaire, chapitre 7.4, deuxième point, troisième phrase, la deuxième forme de biais d'automatisation s'applique : « En général, le passager humain du véhicule finit par avoir trop confiance dans les capacités du système à contrôler le véhicule et commence à être moins attentif. »",
+          "c": "FAUX - Les testeurs devaient « tester à la fois la qualité des recommandations du système et la qualité des saisies humaines correspondantes par des utilisateurs représentatifs » (chap. 7.4, dernier paragraphe).",
+          "d": "CORRECT - « Il s'est avéré que la première forme d'automatisation (« l'être humain accepte les recommandations du système ») réduit généralement la qualité des décisions prises de 5 %, mais selon le contexte du système, cette valeur peut être encore plus élevée. » (Chap. 7.4, premier point, 1ère et 3ème phrases)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-7.7.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K4",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q25",
+        "QuestionText": "Une solution de péage basée sur le ML détermine le type de véhicules entrants à partir des images capturées par une caméra. Différents types de caméras sont disponibles, et le fournisseur de la solution affirme pouvoir utiliser des caméras de différentes résolutions. Les images doivent être au format jpeg avec une taille de 320 x 480 pixels afin de pouvoir entraîner le modèle et prédire le résultat. Le modèle doit être capable de classer les types de véhicules avec un certain degré de précision souhaité et doit être testé pour détecter les points faibles. Chaque poste de péage dispose de son propre système complet, qui n'est connecté à aucun autre système.\nParmi les types de tests suivants, lesquels constituent les options les plus appropriées pour les tests que vous choisiriez pour les tests système ?",
+        "AnswerOption": "Sélectionnez DEUX options. (2 sur 5)",
+        "Answers": {
+          "a": "Contrôle de la dérive conceptuelle",
+          "b": "Tests contradictoires",
+          "c": "Test de l'évolutivité",
+          "d": "Contrôle de l'équité",
+          "e": "Test des pipelines de données"
+        },
+        "CorrectAnswer": [
+          "b",
+          "e"
+        ],
+        "Explanation": {
+          "a": "FAUX - La dérive conceptuelle est testée après l'introduction et se concentre sur un changement de l'environnement d'utilisation. Voir le programme CT AI, chapitre 7.6. Cela n'est pas pertinent pour le scénario donné.",
+          "b": "CORRECT - Les tests adversaires sont importants car les exigences stipulent que le système doit être testé contre les vulnérabilités. Voir le programme CT AI, chapitre 9.1.1 : il s'agit ici des fausses prédictions du système causées par des attaquants.",
+          "c": "FAUX - Le test de l'évolutivité n'a pas été mentionné parmi les exigences. Il s'agit de systèmes indépendants et interconnectés qui ne sont pas reliés à d'autres systèmes. Bien que cette option ne soit pas clairement exclue, elle n'a pas grand-chose à voir avec le libellé de la question et n'est donc pas l'une des options les plus probables.",
+          "d": "FAUX - L'équité signifie que des données biaisées (de manière positive) sont utilisées pour l'entraînement. Voir le programme CT AI, chapitre 4.3. Étant donné qu'aucun cas de discrimination positive n'est connu dans le scénario décrit, le test d'équité n'est pas pertinent.",
+          "e": "CORRECT - Il est nécessaire de tester le pipeline de données, car les images peuvent être disponibles dans différents formats et résolutions. Pour que le modèle puisse être entraîné, toutes les images doivent avoir le même format. Ce test est donc important. Voir le programme CT AI, chapitre 7.7, tableau, ligne 2."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-8.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q26",
+        "QuestionText": "Laquelle des options suivantes décrit un défi pour le test des systèmes d'auto-apprentissage ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Le comportement du système peut changer à tel point que les cas de test initialement conçus ne sont plus valables. Même une conception de test particulièrement habile ne permet pas de remédier à ce problème.",
+          "b": "Dans le cadre du développement du système, les critères d'acceptation des modifications du système doivent également être perfectionnés de manière autonome.",
+          "c": "Étant donné que l'environnement d'utilisation du système d'auto-apprentissage peut changer, il est nécessaire de concevoir des tests qui couvrent le comportement du système même sans connaître les environnements d'utilisation possibles.",
+          "d": "La réalisation de tests peut influencer le comportement du système d'auto-apprentissage. En fonction des cas de test utilisés, des changements de comportement indésirables peuvent survenir."
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - La conception de cas de test qui restent valables même lorsque le comportement du système est modifié constitue un défi pour le test. Voir le programme CT AI, chapitre 8.1, premier point.",
+          "b": "FAUX - Les critères d'acceptation des modifications du système d'auto-apprentissage doivent être définis à l'avance. L'acceptation de toute modification du système est contrôlée par ces critères. Si ces critères changent également au fil du temps, les modifications futures du système pourraient ne plus favoriser des changements positifs, mais plutôt négatifs. Voir le programme CT AI, chapitre 8.1, deuxième point.",
+          "c": "FAUX - L'objectif n'est pas de concevoir le test sans connaître l'environnement d'exploitation. Cela permettrait d'éventuelles attaques par contamination des données. L'objectif doit plutôt être de couvrir tous les environnements d'exploitation ou de spécifier des critères d'acceptation pour toutes les modifications possibles de l'environnement d'exploitation. Voir le programme CT AI, chapitre 8.1, cinquième point.",
+          "d": "CORRECT - Les changements de comportement indésirables constituent un défi lors du test des systèmes d'auto-apprentissage. Voir le programme CT AI, chapitre 8.1, septième / dernier point."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-8.3.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q27",
+        "QuestionText": "Laquelle des options suivantes décrit un test valide pour détecter les distorsions ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Examen de la source des données d'entraînement et des méthodes de collecte des données afin d'identifier les biais algorithmiques.",
+          "b": "Mesure de l'influence des entrées et sorties du système en mettant l'accent sur les personnes pour ou contre lesquelles le système est injustement biaisé.",
+          "c": "Obtention d'informations supplémentaires sur les données saisies afin de pouvoir vérifier l'absence de distorsions lors du prétraitement des données.",
+          "d": "Examen des activités de formation ou d'optimisation du modèle afin de pouvoir détecter les biais d'échantillonnage"
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - L'examen de la source des données d'entraînement et des méthodes de collecte des données révèle principalement des biais d'échantillonnage. Voir le programme CT AI, chapitre 8.3, points 1 et 2.",
+          "b": "CORRECT - Cette option décrit un test valide pour détecter les distorsions. Voir le programme CT AI, chapitre 8.3, point 4.",
+          "c": "FAUX - L'obtention d'informations supplémentaires peut être utile pour identifier des variables « cachées » pertinentes pour l'évaluation du biais, mais qui ne constituent pas elles-mêmes des données d'entrée du modèle (voir le programme CT AI, chapitre 8.3, point 5). La révision du prétraitement des données peut certes être utile (voir programme CT AI, chapitre 8.3, point 3). Cependant, les variables « cachées » issues de la collecte d'informations supplémentaires ne peuvent avoir aucune influence sur le prétraitement des données mis en œuvre jusqu'à présent, car elles ne sont tout simplement pas traitées. Cette option est donc illogique en soi.",
+          "d": "FAUX - L'examen des activités liées à l'entraînement ou à l'optimisation du modèle permet principalement de détecter les biais algorithmiques. Voir le programme CT AI, chapitre 8.3, points 1 et 2."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-8.5.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q28",
+        "QuestionText": "Laquelle des options suivantes décrit un défi lié au test de systèmes complexes basés sur l'IA ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Dans ce contexte, le problème de l'oracle de test signifie que les systèmes basés sur l'IA trouvent souvent un oracle de test moins performant que les testeurs humains.",
+          "b": "En raison de la complexité du comportement, seules les procédures de test en boîte blanche sont pertinentes, mais plus les procédures de test en boîte noire.",
+          "c": "La complexité des systèmes basés sur l'IA et de leurs tests augmente lorsque ces systèmes fonctionnent de manière probabiliste et non déterministe.",
+          "d": "La complexité des systèmes basés sur l'IA et de leurs tests n'augmente pas simplement parce que les systèmes sont composés de plusieurs composants qui interagissent entre eux."
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "FAUX - Le problème de cet oracle de test réside dans le fait que le comportement de tels systèmes est trop complexe pour être compris par les humains avec suffisamment de profondeur pour qu'ils puissent en déduire un oracle de test. Voir le programme CT-AI, chapitre 8.5, paragraphe 1.",
+          "b": "FAUX - C'est tout le contraire. La structure de ces systèmes étant souvent générée automatiquement, elle est trop complexe pour permettre de dériver des tests pertinents pour une couverture boîte blanche. C'est pourquoi seuls les tests boîte noire sont souvent pertinents. Voir le programme CT-AI, chapitre 8.5, paragraphe 2.",
+          "c": "CORRECT - Les résultats probabilistes et le non-déterminisme accentuent la complexité des systèmes et donc aussi celle des tests qui leur sont destinés. Voir le programme CT-AI, chapitre 8.5, paragraphe 3.",
+          "d": "FAUX - Voir le programme CT-AI, chapitre 8.5, paragraphe 4 : « Les problèmes liés aux systèmes non déterministes sont encore aggravés lorsqu'un système basé sur l'IA se compose de plusieurs composants interactifs... »"
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-8.8.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K4",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q29",
+        "QuestionText": "Le ministère de la Santé utilise un système basé sur l'intelligence artificielle pour identifier les groupes de patients à risque qui doivent être soutenus et conseillés afin de prévenir l'apparition future de maladies auxquelles ils sont exposés. Les résultats sont également mis à la disposition d'autres organismes publics et des caisses d'assurance maladie. Le système est d'abord formé à partir d'un ensemble de données complet, recueilli par le ministère de la Santé dans le cadre de deux enquêtes menées auprès de 5 000 hommes de plus de 50 ans et de 25 000 femmes de plus de 30 ans. Le système continuera à identifier les patients à risque en collectant des informations provenant des réseaux sociaux accessibles au public.\nParmi les attributs suivants, lesquels doivent être pris en compte avec le plus de soin lors de la définition des objectifs et des critères d'acceptation du système ?",
+        "AnswerOption": "Sélectionnez DEUX options. (2 sur 5)",
+        "Answers": {
+          "a": "Adaptabilité",
+          "b": "Préjugé",
+          "c": "Explicabilité",
+          "d": "Flexibilité",
+          "e": "Autonomie"
+        },
+        "CorrectAnswer": [
+          "b",
+          "c"
+        ],
+        "Explanation": {
+          "a": "FAUX - L'adaptabilité est la capacité du système à être modifié (généralement afin de continuer à répondre aux exigences fonctionnelles et non fonctionnelles). Voir le programme CT-AI, chapitre 8.8, tableau, ligne 1. Le scénario ne donne aucune raison de supposer que l'environnement opérationnel du système changera de manière significative et, par conséquent, aucune raison de supposer que le système devra être modifié.",
+          "B": "CORRECT - La distorsion signifie, par exemple, que les données utilisées pour la formation sont faussées. Voir le programme CT-AI, chapitre 8.8, tableau ligne 6, ainsi que le chapitre 8.3. Il existe ici une distorsion dans les données concernant les sexes biologiques (25 000 femmes contre 5 000 hommes) et certains groupes d'âge. La distorsion doit donc être soigneusement prise en compte.",
+          "C": "CORRECT - L'explicabilité est requise lorsque les résultats peuvent avoir un impact significatif sur les patients identifiés comme vulnérables, tant sur le plan médical que financier. L'explicabilité permet d'établir des liens potentiels entre les recettes et les dépenses. Veuillez vous référer au programme CT-AI, chapitre 8.6, paragraphe 4 et chapitre 8.8. Les patients doivent être en mesure de comprendre pourquoi ils ont été classés comme vulnérables, afin de s'assurer qu'ils ont été correctement sélectionnés et dans le cadre des exigences d'explicabilité liées à la protection des données.",
+          "d": "FAUX - La flexibilité est la capacité d'un système à modifier son comportement. Voir le programme CT-AI, chapitre 8.8, tableau, ligne 2. Mais à l'heure actuelle, sur la base du scénario, il n'y a aucune raison de supposer que ce système devra être utilisé en dehors des spécifications initiales, de sorte qu'il n'est pas prévu que son comportement doive être modifié.",
+          "e": "FAUX - L'autonomie est la capacité du système à décider lui-même de la nécessité d'une intervention humaine. Voir le programme CT-AI, chapitre 8.2, paragraphe 1. Il n'y a aucune raison de supposer que le système doit pouvoir fonctionner sans intervention pendant de longues périodes ou décider de la nécessité d'une intervention humaine."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-9.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q30",
+        "QuestionText": "Laquelle des options suivantes décrit une relation valide entre les tests des systèmes ML et la prévention des attaques adverses ou de la corruption des données ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Le test adverse consiste à trouver et à corriger les points faibles en menant des attaques adverses.",
+          "b": "Les tests comparatifs peuvent être utilisés pour détecter les différences entre la version précédente du système et la nouvelle version.",
+          "c": "Une fois les exemples adverses identifiés, il faut empêcher qu'ils puissent entrer en contact avec le système, par exemple à l'aide d'un pare-feu.",
+          "d": "Étant donné que les systèmes basés sur l'IA continuent d'apprendre et d'adapter leur comportement en permanence, l'utilisation de tests de régression n'est pas pertinente."
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Voir le programme CT-AI, chapitre 9.1.1, dernier paragraphe.",
+          "b": "FAUX - Les tests comparatifs sont utilisés lorsqu'une version alternative du système doit être utilisée comme pseudo-oracle (éventuellement déjà existante ou développée par une autre équipe). Voir le programme CT-AI, chapitre 9.3, paragraphe 1. Ici, cependant, il s'agit de comparer des versions du même système. Il s'agit donc de tests A/B. Voir le programme CT-AI, chapitre 9.1.2, dernier paragraphe.",
+          "c": "FAUX - Les exemples identifiés sont ajoutés aux données d'entraînement afin que le système puisse apprendre à les traiter. Voir chapitre 9.1.1, dernier paragraphe.",
+          "d": "FAUX - Une suite de tests fiable permet tout à fait de déterminer si un système a été contaminé. Voir le programme CT-AI, chapitre 9.1.2, dernier paragraphe, dernière phrase."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-9.2.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q31",
+        "QuestionText": "Dans quelles situations parmi celles ci-dessous le test par paires est-il le PLUS ADAPTÉ ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Avec un nombre élevé de testeurs de logiciels pour les systèmes basés sur l'IA",
+          "b": "En cas de nombre élevé de composants du système basé sur l'IA",
+          "c": "En cas de nombre élevé de cas de test pour le système basé sur l'IA",
+          "d": "En cas de nombre très élevé de paramètres pour le système basé sur l'IA"
+        },
+        "CorrectAnswer": "d",
+        "Explanation": {
+          "a": "FAUX - Le test par paires fait référence à un nombre élevé de paramètres qui présentent un intérêt pour le système basé sur l'IA. Voir le programme CT-AI, chapitre 9.2, paragraphes 1 et 3. Le nombre de testeurs n'a ici aucune importance. Dans le cadre de la programmation en binôme, il est certes possible d'envisager l'intervention de plusieurs développeurs/testeurs sur le même PC. Mais cela n'est alors pas/très rarement dû à un nombre trop élevé de testeurs.",
+          "b": "FAUX - Les tests par paires concernent un grand nombre de paramètres qui présentent un intérêt pour le système basé sur l'IA. Voir le programme CT-AI, chapitre 9.2, paragraphes 1 et 3. Le nombre de composants du système n'a ici aucune importance.",
+          "c": "FAUX - Les tests par paires se réfèrent à un nombre élevé de paramètres qui présentent un intérêt pour le système basé sur l'IA. Voir le programme CT-AI, chapitre 9.2, paragraphe 1 et paragraphe 3. Un nombre élevé de cas de test n'est pas pertinent dans ce contexte. d) CORRECT - Voir le programme CT-AI, chapitre 9.2, paragraphe 1, paragraphe",
+          "d": "CORRECT - Voir le programme CT-AI, chapitre 9.2, paragraphe 1, paragraphe 3. Le test par paires se réfère à un nombre élevé de paramètres."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-9.3.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q32",
+        "QuestionText": "Un responsable des tests décide de créer un système non basé sur l'IA, doté de fonctionnalités similaires à celles du système basé sur l'IA à tester (SUT), afin de faciliter le test du système.\nLaquelle des affirmations suivantes est LA PLUS JUSTE ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Le responsable des tests a opté pour des tests consécutifs, car cela permet de résoudre le problème de l'oracle de test en utilisant un pseudo-oracle.",
+          "b": "Le responsable des tests a opté pour les tests A/B, car ceux-ci permettent de résoudre le problème de l'oracle de test en utilisant un pseudo-oracle.",
+          "c": "Le responsable des tests a opté pour des tests consécutifs, car les exigences non fonctionnelles du SUT peuvent être vérifiées à l'aide du pseudo-oracle.",
+          "d": "Le responsable des tests a opté pour des tests A/B, car les exigences non fonctionnelles du SUT peuvent être vérifiées à l'aide du pseudo-oracle."
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Il s'agit d'un exemple de test comparatif dans lequel le système non IA est utilisé comme pseudo-oracle. Voir le programme CT IA, chapitre 9.3, paragraphe 1 : « Dans les tests comparatifs, une version alternative du système est utilisée comme pseudo-oracle ».",
+          "b": "FAUX - Dans les tests A/B, nous utilisons une variante du SUT pour la comparer au SUT. Voir le programme CT AI, chapitre 9.4, dernier paragraphe : « dans les tests A/B, deux variantes du même système sont généralement comparées entre elles ». Ici, nous avons simplement deux systèmes avec des fonctionnalités similaires. Ils sont même si différents qu'il s'agit d'un système basé sur l'IA et d'un système non basé sur l'IA.",
+          "c": "FAUX - Les ressources et les propriétés non fonctionnelles du pseudo-oracle et du SUT sont probablement différentes, le système alternatif ne peut donc pas être utilisé pour les tests non fonctionnels. Lors du test comparatif, les performances des deux systèmes peuvent être très différentes. Voir le programme CT-AI, chapitre 9.3, paragraphe 1, dernière phrase : « Il n'est par exemple pas nécessaire qu'il s'exécute aussi rapidement... »",
+          "d": "FAUX - Dans les tests A/B, nous utilisons une variante du SUT pour la comparer au SUT. Voir le programme CT AI, chapitre 9.4, dernier paragraphe : « dans les tests A/B, deux variantes du même système sont généralement comparées entre elles ». Ici, nous avons simplement deux systèmes avec des fonctionnalités similaires. Ils sont même si différents qu'il s'agit d'un système basé sur l'IA et d'un système non basé sur l'IA."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-9.5.1",
+    "LearningObjectiveDescription": "Anwenden von metamorphem Testen für das Testen KI-basierter Systeme",
+    "KnowledgeType": "K3",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q33",
+        "QuestionText": "Un système de recommandation de téléphones mobiles basé sur l'intelligence artificielle propose une liste de téléphones mobiles en fonction de ses connaissances sur les préférences indiquées par l'utilisateur, à savoir un écran aussi grand que possible, une mémoire aussi grande que possible et une longue durée de vie de la batterie. Le système indique un prix acceptable pour chaque combinaison de ces caractéristiques.\nTrois cas de test initiaux (T1 à T3) sont utilisés pour tester le système de recommandation de téléphones mobiles. De nouveaux cas de test A à D sont également proposés.\nT1 | T2 | T3\nDiagonale d'écran | 4 pouces | 4 pouces | 5 pouces\nCapacité de stockage | 8 Go | 16 Go | 8 Go\nAutonomie de la batterie | 36 heures | 24 heures | 16 heures\nPrix acceptable | <= 200 € | >= 250 € | >= 220 €\nTest A | Test B | Test C | Test D\nDiagonale d'écran | 4 pouces | 4 pouces | 5 pouces | 5 pouces\nCapacité de stockage | 8 Go | 16 Go | 8 Go | 8 Go\nAutonomie de la batterie | 24 heures | 30 heures | 20 heures | 24 heures\nPrix acceptable | <= 200 € | >= 250 € | >= 220 €\nQuels sont les nouveaux tests qui constituent des cas de test de suivi pour les tests métamorphiques ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "A, B sont des cas de test de suivi ; C, D ne sont pas des cas de test de suivi.",
+          "b": "A et C sont des cas de test de suivi ; B et D ne sont pas des cas de test de suivi.",
+          "c": "A, B, C sont des cas de test de suivi ; D n'est pas un cas de test de suivi.",
+          "d": "B, C, D sont des cas de test de suivi ; A n'est pas un cas de test de suivi."
+        },
+        "CorrectAnswer": "c",
+        "Explanation": {
+          "a": "",
+          "b": "",
+          "c": "La réponse c) est CORRECT, les autres réponses sont FRAUDE, car :\n1. A, B et C sont des cas de test de suivi.\n2. D n'est pas un cas de test de suivi.\nLes relations métamorphiques sont les suivantes : une augmentation des valeurs d'entrée (diagonale de l'écran, capacité de mémoire, autonomie de la batterie) indique de meilleures caractéristiques du téléphone mobile et augmente le prix acceptable.\nLe test A est un test de suivi dérivé du test T1. Par rapport au test T1, l'autonomie de la batterie est plus faible (30 heures au lieu de 36 heures), les autres valeurs restant inchangées. Le test A n'est pas comparable aux tests T2 et T3. Par conséquent, le prix acceptable est au maximum aussi élevé que pour le test T1, soit 200 €.\nLe test B est un test complémentaire. Il découle uniquement du test T2, car il présente une autonomie de batterie supérieure à celle-ci (30 heures au lieu de 24 heures), toutes les autres valeurs étant identiques. Le test B n'est pas comparable aux tests T1 et T3. Par conséquent, le prix acceptable est au moins aussi élevé que pour le test T2, soit au moins 250 €.\nLe test C est un test de suivi. Il n'est pas comparable aux tests T1 et T2. Les dimensions des téléphones portables sont comparables à celles du T3 : la taille de l'écran et la mémoire sont identiques, l'autonomie de la batterie est supérieure à celle du T3 (20 heures contre 16 heures). Par conséquent, le prix acceptable est au moins aussi élevé que celui du T3, soit au moins 220 €.\nLe test D n'est pas un test de suivi. Il n'est pas comparable aux tests T1 et T2. Les dimensions des téléphones portables sont comparables à celles du T3 : la taille de l'écran et la mémoire sont identiques, l'autonomie de la batterie est supérieure à celle du T3 (24 heures contre 16 heures). Par conséquent, le prix acceptable est au moins aussi élevé que celui du T3, soit au moins 220 €, et non 200 € maximum, comme indiqué dans le test D.",
+          "d": ""
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-9.6.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q34",
+        "QuestionText": "Parmi les affirmations suivantes concernant les systèmes basés sur l'IA, laquelle est correcte en ce qui concerne les tests basés sur l'expérience ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Lors des tests exploratoires, les données d'entraînement sont visualisées à l'aide d'outils afin d'examiner différents aspects des données.",
+          "b": "Dans le cadre de la détermination intuitive des cas de test, les cas de test existants sont adaptés de manière dynamique, par exemple sur la base des tests métamorphiques.",
+          "c": "Pour les tests exploratoires, on utilise entre autres la « liste de contrôle des tests ML » de Google.",
+          "d": "Les tests basés sur l'expérience nécessitent le calcul des mesures de performance fonctionnelle du ML."
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Il s'agit d'une analyse exploratoire des données, qui est une méthode exploratoire (voir chap. 9.6, 5e paragraphe, deux dernières phrases).",
+          "b": "FAUX - Il s'agit d'une approche utilisée dans le cadre des tests exploratoires (voir chap. 9.6, 3e paragraphe). La détermination intuitive des cas de test repose quant à elle sur les connaissances des testeurs en matière d'erreurs typiques commises par les développeurs et d'effets des erreurs dans des systèmes similaires (voir chap. 9.6, 2e paragraphe).",
+          "c": "FAUX - Il s'agit d'un contrôle basé sur une liste de contrôle (voir chap. 9.6, premier et sixième paragraphes). Les tests exploratoires ne s'appuient pas sur des listes de contrôle (voir chap. 9.6, troisième paragraphe).",
+          "d": "FAUX - Le calcul des mesures de performance fonctionnelle du ML (voir chapitre 5) est important pour évaluer la qualité d'un système d'IA, mais n'a rien à voir avec les tests basés sur l'expérience (voir chapitre 9.6)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-9.7.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K4",
+    "Details": [
+      {
+        "QuestionPoints": "2",
+        "QuestionId": "q35",
+        "QuestionText": "LAIgal Systems propose un produit basé sur l'intelligence artificielle qui permet d'extraire des jugements pertinents et favorables similaires à une affaire judiciaire donnée. Ce produit est utilisé par les juges dans les tribunaux. Les détails de l'affaire en cours sont fournis et le système génère des jugements correspondants. Le système doit être protégé contre les entrées malveillantes. Un produit open source similaire existe et est disponible. L'absence d'un oracle de test approprié représente un défi lors des tests.\nParmi les techniques de test suivantes, laquelle devrait être choisie pour tester la nouvelle version pendant le test du système ?",
+        "AnswerOption": "Sélectionnez DEUX options. (2 sur 5)",
+        "Answers": {
+          "a": "Tests A/B",
+          "b": "Tests dos à dos",
+          "c": "Tests contradictoires",
+          "d": "Contrôle des transitions d'état",
+          "e": "Calcul des indicateurs de performance ML fonctionnels"
+        },
+        "CorrectAnswer": [
+          "b",
+          "c"
+        ],
+        "Explanation": {
+          "a": "FAUX - Les tests A/B sont particulièrement utiles lorsque deux variantes sont comparées afin de déterminer si la nouvelle variante constitue une amélioration par rapport à l'ancienne (voir chap. 9.7, 1er paragraphe, 2e point). Mais ici, il s'agit de versions différentes.",
+          "b": "CORRECT - Lors de tests comparatifs, un système équivalent est utilisé comme pseudo-oracle pour les tests (voir chap. 9.7, 1er paragraphe, 1er point). Il s'agit ici d'un produit open source similaire.",
+          "c": "CORRECT - Les tests adverses sont importants ici, car le système doit être protégé contre les entrées adverses (voir chap. 9.1.1, dernier paragraphe).",
+          "d": "FAUX - Les tests de transition d'état (voir chap. 4.2.4, programme CTFL V3.1D) pourraient certes être utiles, mais rien dans le scénario n'indique que les états du système jouent un rôle essentiel. Cette procédure de test ne devrait donc pas être choisie.",
+          "e": "FAUX - Le calcul des mesures de performance fonctionnelles du ML est approprié dans la phase de vérification du modèle pour les problèmes de classification (voir chap. 5.1). Pour les problèmes autres que la classification, il n'est pas approprié dans la phase de test du système."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-10.1.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q36",
+        "QuestionText": "Laquelle des affirmations suivantes illustre une différence entre un environnement de test pour les systèmes basés sur l'IA et un environnement de test pour les systèmes traditionnels ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Les environnements de test pour les systèmes basés sur l'IA peuvent nécessiter un mécanisme permettant de déterminer comment une décision particulière est prise. Cela n'est pas exigé pour les systèmes traditionnels.",
+          "b": "Les environnements de test pour les systèmes basés sur l'IA nécessitent des simulateurs et des environnements virtuels, contrairement aux systèmes traditionnels.",
+          "c": "Les environnements de test pour les systèmes basés sur l'IA nécessitent de grandes quantités de données, tandis que les systèmes conventionnels n'en ont pas besoin.",
+          "d": "Les environnements de test pour les systèmes multi-agents basés sur l'IA doivent nécessairement être non déterministes, contrairement aux environnements de test des systèmes multi-agents traditionnels."
+        },
+        "CorrectAnswer": "a",
+        "Explanation": {
+          "a": "CORRECT - Pour les environnements d'IA, il peut être nécessaire de prévoir des mécanismes d'explication lorsqu'il est difficile de déterminer comment le système a pris ses décisions (voir chap. 10.1, 4e point).",
+          "b": "FAUX - Les systèmes conventionnels nécessitent souvent des simulateurs et des environnements virtuels (voir chap. 10.2).",
+          "c": "FAUX - Même les systèmes conventionnels peuvent nécessiter un volume important de données (voir chap. 10.1, dernier point).",
+          "d": "FAUX - Le non-déterminisme de l'environnement de test peut être nécessaire pour les systèmes d'IA, conformément au chapitre 10.1, 3e point ; cela vaut également pour les systèmes multi-agents classiques, car des retards imprévisibles peuvent survenir."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-11.2.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q37",
+        "QuestionText": "Laquelle des affirmations suivantes concernant l'utilisation de l'IA pour analyser de nouvelles erreurs est LA PLUS CORRECT ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Un petit nombre d'erreurs dans une nouvelle application peut être facilement classé à l'aide d'une approche ML appropriée.",
+          "b": "Si un grand nombre d'erreurs sont signalées dans une petite application, le temps nécessaire à leur résolution peut être optimisé grâce au triage des erreurs.",
+          "c": "La catégorisation des erreurs basée sur l'IA n'est pas utile pour les systèmes automatisés de signalement des erreurs et les projets de grande envergure.",
+          "d": "Pour une nouvelle équipe de développement, les modèles ML peuvent suggérer quel développeur est le plus apte à corriger certaines erreurs."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Lorsqu'un petit nombre d'erreurs doit être classé et qu'aucune donnée historique n'est disponible, aucune donnée d'apprentissage ne peut être utilisée dans le cadre d'une approche ML (voir chap. 3.3, 1er point).",
+          "b": "CORRECT - Si un grand nombre d'erreurs est signalé pour une petite application, il est très probable que l'identification des doublons permette d'optimiser le temps de dépannage (voir chap. 11.2, 1er paragraphe et 1er point, « Triage des erreurs »).",
+          "c": "FAUX - La catégorisation des erreurs basée sur l'IA est particulièrement utile pour les systèmes automatisés de signalement des erreurs et les grands projets (voir chap. 11.2, 1er point, dernière phrase).",
+          "d": "FAUX - Pour que les modèles ML puissent recommander le développeur le plus à même de corriger certaines erreurs, ils devraient disposer de données antérieures/historiques sur le contenu des messages d'erreur et les attributions aux développeurs (voir chap. 11.2, dernier point « Attribution »)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-11.3.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q38",
+        "QuestionText": "Laquelle des affirmations suivantes concernant la génération de cas de test basée sur l'IA est correcte ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "La création des cas de test basée sur l'IA repose sur le code source, et non sur un modèle de test lisible par machine.",
+          "b": "Le problème de l'oracle de test dans la création de cas de test basée sur l'IA peut être résolu par des tests comparatifs.",
+          "c": "Pour les cas de test fonctionnels générés par l'IA, des résultats prévisibles sont toujours disponibles.",
+          "d": "Des recherches montrent que les outils de génération de cas de test basés sur l'IA n'atteignent pas des degrés de couverture équivalents à ceux des outils de test de fuzz."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - La création des cas de test basée sur l'IA repose sur le code source et un modèle de test lisible par machine (voir chap. 11.3, 1er paragraphe, 2e phrase).",
+          "b": "CORRECT - Le problème de l'oracle de test dans la création de cas de test basée sur l'IA est résolu par des tests comparatifs lorsqu'un système approprié pouvant être utilisé comme pseudo-oracle est disponible (voir chap. 11.3, 2e paragraphe, 2e phrase).",
+          "c": "FAUX - « Cependant, si aucun modèle de test définissant les comportements requis n'est utilisé comme base pour les cas de test, la génération de cas de test souffre généralement d'un problème d'oracle de test, car l'outil basé sur l'IA ne sait pas quels résultats sont attendus pour un ensemble donné de données de test. » (Chap. 11.3, 2e paragraphe, 1re phrase).",
+          "d": "FAUX - Des recherches comparant des outils de génération de cas de test basés sur l'IA avec des outils de test de flou similaires montrent que les outils basés sur l'IA atteignent un niveau de couverture équivalent (voir chap. 11.3, 3e paragraphe, 1re phrase)."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-11.4.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q39",
+        "QuestionText": "Parmi les options suivantes, laquelle indique CORRECTEMENT comment un outil basé sur l'IA peut optimiser les suites de tests de régression ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "Grâce à l'analyse des résultats faux positifs",
+          "b": "En analysant les informations issues des activités de test précédentes",
+          "c": "Grâce à l'utilisation d'algorithmes génétiques pour créer de nouveaux cas de test",
+          "d": "En actualisant les résultats attendus afin de compenser l'écart par rapport au concept."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - L'objectif de l'optimisation des tests de régression est de réduire la taille d'une suite de tests, de définir des priorités ou de l'étendre (voir chap. 11.4, 1er paragraphe), mais pas de réduire le nombre de faux positifs.",
+          "b": "CORRECT - L'optimisation des suites de tests de régression s'effectue par l'analyse des informations relatives aux tests précédents (voir chap. 11.4, 2e paragraphe).",
+          "c": "FAUX - Conformément à la section 11.4 du programme, l'optimisation des tests de régression est généralement effectuée à partir des données des exécutions de tests précédentes (voir chap. 11.4, 2e paragraphe). L'utilisation d'algorithmes génétiques pour créer de nouveaux tests n'optimise toutefois pas la suite de tests de régression.",
+          "d": "FAUX - La dérive conceptuelle désigne la modification de l'environnement d'utilisation du logiciel (voir chap. 7.6). Si le logiciel a été modifié pour cette raison, des cas de test de régression supplémentaires sont nécessaires. Cela n'entraîne toutefois pas d'optimisation de la suite de tests de régression."
+        }
+      }
+    ]
+  },
+  {
+    "LearningObjective": "AI-11.5.1",
+    "LearningObjectiveDescription": "tbd",
+    "KnowledgeType": "K2",
+    "Details": [
+      {
+        "QuestionPoints": "1",
+        "QuestionId": "q40",
+        "QuestionText": "Parmi les options suivantes, laquelle décrit correctement comment et dans quel but un outil de test basé sur l'IA peut effectuer une prédiction d'erreur ?",
+        "AnswerOption": "Sélectionnez UNE option. (1 sur 4)",
+        "Answers": {
+          "a": "L'analyse des anomalies dans les métriques du code source, telles que le nombre de lignes de code et la complexité cyclomatique, permet de prédire les erreurs.",
+          "b": "La prévision des erreurs, basée sur l'expérience passée avec le même code source ou les mêmes développeurs, doit être effectuée à l'aide d'une approche fondée sur l'IA.",
+          "c": "L'analyse des résultats de tests faux positifs observés dans le passé permet de prédire les erreurs.",
+          "d": "Pour établir les priorités dans le test des composants qui contiennent plus d'erreurs que d'autres, des outils de test non encore aboutis peuvent également convenir s'ils sont basés sur l'IA."
+        },
+        "CorrectAnswer": "b",
+        "Explanation": {
+          "a": "FAUX - Les métriques du code source telles que le nombre de lignes de code et la complexité cyclomatique ne sont pas les meilleurs prédicateurs pour prévoir les erreurs (voir chap. 11.5, 3e paragraphe, 2e phrase).",
+          "b": "CORRECT - La prédiction des erreurs s'effectue grâce à une recherche basée sur l'IA de corrélations entre les métriques de code/processus/personnel et les erreurs dans la même base de code ou avec les mêmes développeurs (voir chap. 11.5, 2e paragraphe).",
+          "c": "FAUX - L'objectif de la prédiction des erreurs n'est pas d'identifier les erreurs avec un résultat faussement positif, mais de déterminer combien d'erreurs existent réellement et si elles peuvent être détectées (voir chap. 11.5, 1er paragraphe).",
+          "d": "FAUX - « Les résultats de la prédiction des défauts sont généralement utilisés pour établir des priorités pour les tests (par exemple, davantage de tests pour les composants pour lesquels davantage de défauts sont prédits). » « Cette capacité dépend de la maturité de l'outil utilisé. » (voir chap. 11.5, 1er paragraphe, 3e et 2e phrases)."
+        }
+      }
+    ]
+  }
+]

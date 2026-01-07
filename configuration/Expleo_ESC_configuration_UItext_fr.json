@@ -1,0 +1,55 @@
+﻿
+{
+  "appMode": "Mode",
+  "appLicense": "Votre licence",
+  "appLicenseUnit": "jours",
+  "yourChoice": " Choisir une question",
+  "appTitle": "ESC",
+  "header": "EXPLEO - SkillCheck",
+  "subHeader": "  ISTQB AI Testing Certification (CT-AI)",
+  "learningObjective": "Objectifs d'apprentissage:",
+  "numberOfQuestions": "Nombre de questions:",
+  "questionLabel": "Question",
+  "timeLimit": "Limite de temps:",
+  "timeUnit": "Minutes",
+  "timeRemaining": "Temps restant:",
+  "passingScore": "Pour réussir l'examen, vous devez:",
+  "currentScoreLabel": "Score actuel:",
+  "NotAnsweredQuestions": "Questions sans réponse:",
+  "questionOf": "Question de",
+  "buttons": {
+    "previousQuestion": "Question précédentee",
+    "nextQuestion": "Question suivante",
+    "resetAnswers": "Réinitialiser la réponse",
+	"submitAnswer": "Envoyer la réponse",
+    "submitExam": "Envoyer l'examen",
+    "repeatExam": "Répéter l'examen",
+    "repeatFailedQuestions": "Répéter les questions auxquelles vous avez mal répondu"
+  },
+  "errors": {
+    "invalidQuestionNumber": "Veuillez sélectionner une question valide comprise entre {min} et {max}!",
+	"invalidSubmit": "Veuillez sélectionner une réponse avant d'envoyer votre réponse.",
+	"invalidFailedQuestion": "Les questions auxquelles vous avez mal répondu ne peuvent pas être répétées!",
+	"unansweredSubmitExam": "Vous avez {count} questions sans réponse. Êtes-vous sûr de vouloir soumettre l'examen ?"
+  },
+  "templates": {
+       "inCorrectAnswerFeedback": "<strong>{questionWord} {index}: {incorrectLabel}</strong> {yourAnswerLabel}{answersPluralSuffix}: {answersList} | {CorrectAnswerLabel}{correctPluralSuffix}: {CorrectAnswersList}",
+	   "CorrectAnswerFeedback": "<strong>{correctLabel}</strong> {yourAnswerLabel}{answersPluralSuffix}: {answersList}",
+	   "scoreSummary": "{scoreLabel}: {score}/{total} ({percentage}%)<br><span>{resultText}</span>"
+     },
+    "labels": {
+    "questionWord": "Question",
+    "ofWord": "de",
+	"showingFor": "Afficher {count} question(s) pour {code}",
+	"showingAll": "Afficher toutes les {count} questions",
+    "incorrectLabel": "Faux.",
+	"correctLabel": "Correct.",
+    "yourAnswerLabel": "Votre réponse",
+    "CorrectAnswerLabel": "Réponse correcte",
+	"explanationLabel": "Explication",
+    "notAnswered": "Sans réponse",
+	"scoreLabel": "Votre résultat",
+	"passedText": "RÉUSSI",
+    "failedText": "ÉCHOUÉ"
+   }
+}
